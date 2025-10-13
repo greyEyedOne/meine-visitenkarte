@@ -21,7 +21,4 @@ main {
 main:has(.connect:hover) {
   background-image: url("/img/bg-ready-project.png");
 }
-main:has(.connect:hover) .slogan {
-  color: azure;
-}
 </style>

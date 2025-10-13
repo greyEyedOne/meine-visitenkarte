@@ -50,9 +50,6 @@
       rechtliche oder technische Entwicklungen anzupassen.
     </p>
 
-    <h1>Privacy Policy</h1>
-
-    <p><strong>Last updated:</strong> October 13, 2025</p>
     <NuxtLink to="/en/privacy-policy" class="underline"
       >English version</NuxtLink
     >

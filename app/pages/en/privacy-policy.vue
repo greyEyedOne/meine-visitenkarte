@@ -51,6 +51,9 @@
           This privacy policy may be updated when necessary to reflect legal or
           technical developments.
         </p>
+        <NuxtLink to="/datenschutzerklaerung" class="underline"
+          >Deutsche Version</NuxtLink
+        >
       </div>
     </body>
   </html>
