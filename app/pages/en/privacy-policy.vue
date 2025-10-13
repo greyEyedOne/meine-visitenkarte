@@ -7,7 +7,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
-      <main>
+      <div class="text-gray-600 dark:text-white">
         <h1>Privacy Policy</h1>
 
         <p><strong>Last updated:</strong> October 13, 2025</p>
@@ -51,7 +51,7 @@
           This privacy policy may be updated when necessary to reflect legal or
           technical developments.
         </p>
-      </main>
+      </div>
     </body>
   </html>
 </template>

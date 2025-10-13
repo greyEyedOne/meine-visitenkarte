@@ -1,8 +1,8 @@
 <template>
   <main
-    class="mx-auto py-6 h-screen w-screen dark:bg-gray-900 mask-l-from-50% mask-l-to-90% bg-[url('/img/bg-the-template.png')] dark:bg-[url('/img/bg-dark-template.png')] bg-center bg-no-repeat bg-cover transition-all delay-150 duration-300 ease-in-out"
+    class="mx-auto py-6 h-screen w-screen dark:bg-gray-900 mask-l-from-50% mask-l-to-90% bg-[url('/img/bg-template.png')] dark:bg-[url('/img/bg-dark-template.png')] bg-center bg-no-repeat bg-cover transition-all delay-150 duration-300 ease-in-out"
   >
-    <div class="dark:backdrop-blur-sm backdrop-blur-md h-full w-full">
+    <div class="backdrop-blur-sm h-full w-full">
       <div
         class="flex flex-col items-center justify-center h-full max-w-4xl mx-auto"
       >
