@@ -1,6 +1,6 @@
 <template>
   <main
-    class="mx-auto py-6 h-screen w-screen dark:bg-gray-900 mask-l-from-50% mask-l-to-90% bg-[url('/img/bg-template.png')] dark:bg-[url('/img/bg-dark-template.png')] bg-center bg-no-repeat bg-cover transition-all delay-150 duration-300 ease-in-out"
+    class="mx-auto pb-6 h-screen w-screen dark:bg-gray-900 mask-l-from-50% mask-l-to-90% bg-[url('/img/bg-template.png')] dark:bg-[url('/img/bg-dark-template.png')] bg-center bg-no-repeat bg-cover transition-all delay-150 duration-300 ease-in-out"
   >
     <div class="backdrop-blur-sm h-full w-full">
       <div
@@ -25,6 +25,11 @@ main:has(.connect:hover) {
 
 main:has(.connect:hover) .card {
   background: #cbd5e1c5;
+  color: #312e81;
+}
+
+main:has(.connect:hover) .menu-item {
+  background: #eef2ff;
   color: #312e81;
 }
 

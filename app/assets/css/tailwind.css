@@ -4,6 +4,9 @@
 
 /* Global styles for HTML-tags */
 @layer base {
+  a {
+    @apply underline decoration-0 hover:no-underline;
+  }
   h1 {
     @apply text-3xl font-bold text-gray-900 dark:text-white text-center;
   }
