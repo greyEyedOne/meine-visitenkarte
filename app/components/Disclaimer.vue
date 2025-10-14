@@ -1,5 +1,5 @@
 <template>
-  <div class="disclaimer mx-4 text-center text-red-300 w-full">
+  <div class="disclaimer box-border m-6 text-center text-red-300 w-100">
     Dear visitors, <br />
     the site is currently under development.<br />
     <span class="underline">

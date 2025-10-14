@@ -9,7 +9,7 @@ const buttonNames = [
 </script>
 
 <template>
-  <div class="flex flex-col w-full">
+  <div class="flex flex-col w-full overflow-x-scroll">
     <div class="topbar justify-between flex mt-0 gap-4 w-full">
       <NuxtLink
         v-for="(item, index) in buttonNames"
