@@ -18,7 +18,19 @@
 main {
   transition: all 1s ease-in-out;
 }
+
 main:has(.connect:hover) {
   background-image: url("/img/bg-ready-project.png");
+}
+
+main:has(.connect:hover) .card {
+  background: #cbd5e1c5;
+  color: #312e81;
+}
+
+main:has(.connect:hover) .card h1,
+main:has(.connect:hover) .card h2,
+main:has(.connect:hover) .card p {
+  color: #312e81;
 }
 </style>
