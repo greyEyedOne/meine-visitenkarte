@@ -1,8 +1,17 @@
+<script setup>
+import { useRoute } from 'vue-router'
+const route = useRoute()
+
+const excludeDisclaimerOn = ['/contacts']
+console.log(route.path)
+</script>
+
 <template>
   <div class="relative w-full">
     <Menu />
-
-    <Disclaimer class="mt-4" />
+    <div v-if="!excludeDisclaimerOn.includes(route.path)" class="mt-4">
+      <Disclaimer />
+    </div>
   </div>
 </template>
 
