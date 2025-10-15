@@ -9,4 +9,6 @@ export default defineNuxtConfig({
     '@nuxt/test-utils',
     '@nuxt/ui',
   ],
+
+  css: ['~/app/assets/css/tailwind.css'],
 })
