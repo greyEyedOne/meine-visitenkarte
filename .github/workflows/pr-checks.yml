@@ -1,0 +1,60 @@
+name: PR Checks
+
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run linting
+        run: pnpm lint
+
+      - name: Run tests
+        run: pnpm test --run
+
+      - name: Build application
+        run: pnpm build
+
+      - name: Check if server can run
+        run: |
+          # Start the preview server in the background
+          pnpm preview &
+          SERVER_PID=$!
+
+          # Wait for the server to start (max 30 seconds)
+          echo "Waiting for server to start..."
+          for i in {1..30}; do
+            if curl -f http://localhost:3000 > /dev/null 2>&1; then
+              echo "✓ Server started successfully!"
+              kill $SERVER_PID
+              exit 0
+            fi
+            sleep 1
+          done
+
+          # If we get here, server didn't start
+          echo "✗ Server failed to start within 30 seconds"
+          kill $SERVER_PID 2>/dev/null || true
+          exit 1
