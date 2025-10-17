@@ -12,7 +12,7 @@
 
     <h2>1. Verantwortliche Stelle</h2>
     <p>
-      Marina Appel<br />
+      Marina Appel (beruflich bekannt als „Dara Appel“)<br />
       Hamburg, Deutschland<br />
       E-Mail:
       <a href="mailto:info@your-websmith.de">info@your-websmith.de</a>
