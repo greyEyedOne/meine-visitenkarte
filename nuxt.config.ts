@@ -6,4 +6,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
 
   modules: ['@nuxt/eslint', '@nuxt/image', '@nuxt/test-utils', '@nuxt/ui'],
+  vite: {
+    plugins: [svgLoader()],
+  },
 })
