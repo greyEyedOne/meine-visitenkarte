@@ -2,10 +2,8 @@
   <div
     class="card flex flex-col justify-center mt-auto mb-auto p-6 bg-white/70 dark:bg-slate-300/30 rounded-lg shadow-lg w-11/12 sm:w-3/4 md:w-1/2 lg:w-1/3"
   >
-    <h1
-      class="text-3xl font-bold text-black-500 uppercase dark:text-white text-center"
-    >
-      Mari Appel
+    <h1 class="text-3xl font-bold text-black-500 uppercase dark:text-white text-center">
+      Dara Appel
     </h1>
     <h2 class="text-center dark:text-white">Your Websmith</h2>
     <p class="slogan mt-4 text-gray-600 dark:text-white text-center">
