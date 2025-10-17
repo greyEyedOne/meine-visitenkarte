@@ -15,10 +15,26 @@ const buttonNames = [
 
 <template>
   <!-- Top panel -->
-  <div
-    class="flex relative z-50 bg-black dark:bg-white justify-between items-center w-full"
-  >
+  <div class="flex relative z-50 bg-black dark:bg-white justify-between items-center w-full">
+    <NuxtLink to="/">
+      <div
+        class="logo logo-mobile p-1 pt-0 h-full w-full border-2 border-solid border-white rounded-md"
+      >
+        <img
+          src="/logo.png"
+          class="h-8 dark:hidden shadow-grey-400 -top-1 shadow-md scale-x-115%"
+          alt="logo light"
+        />
+        <img
+          src="/logo-dark.png"
+          class="h-8 hidden dark:block -top-2 scale-x-115%"
+          alt="logo dark"
+        />
+      </div>
+    </NuxtLink>
+
     <!-- Burger menu -->
+
     <button
       class="md:hidden w-10 h-10 flex items-center justify-center rounded-xs bg-black dark:bg-white text-white dark:text-black"
       @click="isMenuOpen = !isMenuOpen"
@@ -62,3 +78,22 @@ const buttonNames = [
     </div>
   </div>
 </template>
+
+<style>
+.logo,
+.logo img {
+  width: 30px;
+  height: 30px;
+  border: none;
+  box-sizing: content-box;
+}
+
+.logo img {
+  border-radius: 6px;
+  transform: scaleX(110%);
+  position: absolute;
+  margin-left: 0.5rem;
+  height: 62px !important;
+  width: auto !important;
+}
+</style>

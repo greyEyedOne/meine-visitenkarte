@@ -2,8 +2,8 @@
   <main
     class="mx-auto pb-6 h-screen w-screen dark:bg-gray-900 bg-[url('/img/bg-template.png')] dark:bg-[url('/img/bg-dark-template.png')] bg-center bg-no-repeat bg-cover transition-all delay-150 duration-300 ease-in-out"
   >
-    <div class="backdrop-blur-sm h-full w-full">
-      <div class="flex flex-col items-center justify-center h-full mx-auto">
+    <div class="backdrop-blur-sm min-h-screen w-full">
+      <div class="flex flex-col items-center justify-center min-h-screen h-full mx-auto">
         <Header />
         <NuxtPage />
         <Footer />
