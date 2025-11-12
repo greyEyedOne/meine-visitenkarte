@@ -15,28 +15,24 @@ const buttonNames = [
 
 <template>
   <!-- Top panel -->
-  <div class="flex relative z-50 bg-black dark:bg-white justify-between items-center w-full">
-    <NuxtLink to="/">
+  <div class="flex relative z-50 bg-transparent justify-between items-center w-full min-h-50">
+    <NuxtLink to="/" class="logo-link">
       <div
         class="logo logo-mobile p-1 pt-0 h-full w-full border-2 border-solid border-white rounded-md"
       >
         <img
-          src="/logo.png"
+          src="/logo-dark.png"
           class="h-8 dark:hidden shadow-grey-400 -top-1 shadow-md scale-x-115%"
           alt="logo light"
         />
-        <img
-          src="/logo-dark.png"
-          class="h-8 hidden dark:block -top-2 scale-x-115%"
-          alt="logo dark"
-        />
+        <img src="/logo.png" class="h-8 hidden dark:block -top-2 scale-x-115%" alt="logo dark" />
       </div>
     </NuxtLink>
 
     <!-- Burger menu -->
 
     <button
-      class="md:hidden w-10 h-10 flex items-center justify-center rounded-xs bg-black dark:bg-white text-white dark:text-black"
+      class="menu md:hidden w-10 h-10 flex items-center justify-center rounded-xs dark:text-white text-black"
       @click="isMenuOpen = !isMenuOpen"
     >
       <span v-if="!isMenuOpen">☰</span>
@@ -44,12 +40,13 @@ const buttonNames = [
     </button>
 
     <!-- Desktop menu -->
-    <div class="hidden md:flex gap-2 w-full justify-center">
+    <div class="hidden md:flex gap-2 w-full justify-end">
       <NuxtLink
         v-for="(item, i) in buttonNames"
         :key="i"
         :to="item.link"
-        class="menu-item px-4 py-2 rounded-xs bg-black text-white uppercase dark:bg-white dark:text-black hover:opacity-80"
+        class="menu-item px-4 py-2 rounded-xs text-black uppercase dark:text-white hover:opacity-80"
+        :data-text="item.title"
       >
         {{ item.title }}
       </NuxtLink>
@@ -59,7 +56,7 @@ const buttonNames = [
   <!-- Shadowing + menu animation -->
   <div
     v-if="isMenuOpen"
-    class="fixed inset-0 z-40 bg-black/50 flex justify-center"
+    class="menu-mobile fixed inset-0 z-40 bg-black/50 flex justify-center"
     @click="isMenuOpen = false"
   >
     <div
@@ -92,8 +89,103 @@ const buttonNames = [
   border-radius: 6px;
   transform: scaleX(110%);
   position: absolute;
-  margin-left: 0.5rem;
-  height: 62px !important;
+  margin-left: 2.5rem;
   width: auto !important;
+}
+
+.menu-item {
+  font-size: 2vw;
+  font-weight: 100;
+  position: relative;
+  text-transform: lowercase;
+  text-wrap: nowrap;
+  transition: all 0.25s ease-in-out;
+}
+
+.menu-item:hover {
+  color: var(--color-amber-500);
+}
+
+.menu-item::before {
+  content: attr(data-text);
+  position: absolute;
+  color: lightblue;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: top 0.75s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  top: 0.5vw;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.menu-item:hover::before {
+  letter-spacing: 1px;
+  opacity: 0.15;
+  font-weight: bold;
+  font-size: 2.5vw;
+  z-index: 0;
+  top: -0.5vw;
+}
+
+.container {
+  padding: 1rem;
+}
+
+button.menu span {
+  font-size: 3rem;
+  margin-bottom: auto;
+  line-height: 2.7rem;
+}
+
+button.menu {
+  margin-bottom: auto;
+  margin-right: 0.5rem;
+}
+
+.logo img:hover {
+  transform: rotateY(-3deg);
+}
+
+.logo img {
+  transition: all 1s ease-in-out;
+}
+
+/* Inline | http://localhost:3000/contacts */
+
+.container.flex.w-full.h-full {
+  padding: 1rem;
+}
+
+button.menu span {
+  /* color: black; */
+  height:;
+  font-:;
+  font-size: 3rem;
+  ´: black;
+  margin-bottom: auto;
+  line-height: 2.7rem;
+}
+
+button.menu {
+  margin-bottom: auto;
+  margin-right: 0.5rem;
+}
+
+.logo {
+  position: fixed !important;
+}
+
+/* Inline | http://localhost:3000/contacts */
+
+.logo,
+.logo img {
+  min-width: 30px;
+  min-height: 30px;
+  max-width: 132px;
+  max-height: 132px;
+  width: auto;
+  height: 17vw;
+  position: static absolute;
+  top: 0;
 }
 </style>
