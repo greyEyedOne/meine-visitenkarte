@@ -8,14 +8,14 @@ const buttonNames = [
   { title: 'About me', link: '/about' },
   { title: 'Meet my CV', link: '/cv' },
   { title: 'Portfolio', link: '/portfolio' },
-  { title: 'Contacts', link: '/contacts' },
+  { title: "Let's talk", link: '/contacts', class: 'cta dark:text-lime-600 text-green-800' },
   { title: 'Blog', link: '/blog' },
 ]
 </script>
 
 <template>
   <!-- Top panel -->
-  <div class="flex relative z-50 bg-transparent justify-between items-center w-full min-h-50">
+  <div class="flex relative z-50 bg-transparent justify-between items-center w-full min-h-45">
     <NuxtLink to="/" class="logo-link">
       <div
         class="logo logo-mobile p-1 pt-0 h-full w-full border-2 border-solid border-white rounded-md"
@@ -32,7 +32,7 @@ const buttonNames = [
     <!-- Burger menu -->
 
     <button
-      class="menu md:hidden w-10 h-10 flex items-center justify-center rounded-xs dark:text-white text-black"
+      class="menu md:hidden cursor-pointer w-10 h-10 flex items-center justify-center rounded-xs dark:text-white text-black"
       @click="isMenuOpen = !isMenuOpen"
     >
       <span v-if="!isMenuOpen">☰</span>
@@ -45,7 +45,10 @@ const buttonNames = [
         v-for="(item, i) in buttonNames"
         :key="i"
         :to="item.link"
-        class="menu-item px-4 py-2 rounded-xs text-black uppercase dark:text-white hover:opacity-80"
+        :class="[
+          item.class,
+          'menu-item px-4 py-2 rounded-xs text-black uppercase dark:text-white hover:opacity-80',
+        ]"
         :data-text="item.title"
       >
         {{ item.title }}
@@ -60,14 +63,14 @@ const buttonNames = [
     @click="isMenuOpen = false"
   >
     <div
-      class="absolute top-10 w-11/12 max-w-sm bg-white dark:bg-gray-900 rounded-xs shadow-lg flex flex-col text-center z-50 animate-slideDown"
+      class="menu-mobile-content absolute top-10 w-11/12 max-w-sm bg-white dark:bg-gray-900 rounded-xs shadow-lg flex flex-col text-center z-50 animate-slideDown"
       @click.stop
     >
       <NuxtLink
         v-for="(item, i) in buttonNames"
         :key="i"
         :to="item.link"
-        class="px-4 py-3 border-b border-gray-200 dark:border-gray-700 text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+        class="px-3 py-3 border-b border-gray-200 dark:border-gray-700 text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition"
         @click="isMenuOpen = false"
       >
         {{ item.title }}
@@ -76,7 +79,7 @@ const buttonNames = [
   </div>
 </template>
 
-<style>
+<style scoped>
 .logo,
 .logo img {
   width: 30px;
@@ -150,18 +153,12 @@ button.menu {
   transition: all 1s ease-in-out;
 }
 
-/* Inline | http://localhost:3000/contacts */
-
 .container.flex.w-full.h-full {
   padding: 1rem;
 }
 
 button.menu span {
-  /* color: black; */
-  height:;
-  font-:;
   font-size: 3rem;
-  ´: black;
   margin-bottom: auto;
   line-height: 2.7rem;
 }
@@ -171,11 +168,15 @@ button.menu {
   margin-right: 0.5rem;
 }
 
+.menu-mobile-content a {
+  box-shadow:
+    rgba(255, 26, 26, 0.636) 0px 10px 15px -3px,
+    rgb(61, 124, 43) 0px 4px 6px -4px;
+}
+
 .logo {
   position: fixed !important;
 }
-
-/* Inline | http://localhost:3000/contacts */
 
 .logo,
 .logo img {
@@ -187,5 +188,11 @@ button.menu {
   height: 17vw;
   position: static absolute;
   top: 0;
+}
+
+.cta {
+  font-weight: 400;
+  letter-spacing: 0.85px;
+  font-style: normal;
 }
 </style>
