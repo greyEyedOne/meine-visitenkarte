@@ -26,12 +26,12 @@ const recommendations = [
         >
           {{ item.name }} <br />Senior Full-Stack Developer, tech company (Germany) <br />
           <span
-            class="recommendation-position text-xs font-normal text-gray-500 dark:text-gray-400"
+            class="recommendation-position text-xs font-normal text-gray-800 dark:text-gray-200"
           >{{ item.position }}</span
           >
         </h3>
         <blockquote
-          class="italic recommendation-quote block mt-4 text-sm leading-relaxed text-gray-700 dark:text-gray-300"
+          class="italic recommendation-quote block mt-4 text-sm leading-relaxed text-gray-800 dark:text-gray-100"
         >
           {{ item.quote }}
         </blockquote>
@@ -39,8 +39,7 @@ const recommendations = [
           (<a
             :href="item.proofLink"
             class="ml-1 not-italic underline underline-offset-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
-          >
-            {{ item.proofText }}</a
+          >{{ item.proofText }} </a
           >)
         </span>
       </div>

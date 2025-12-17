@@ -1,3 +1,20 @@
+<script setup>
+useHead({
+  titleTemplate: (title) =>
+    title ? `${title} · Dara Appel` : 'Dara Appel – Frontend Developer in Hamburg',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Frontend Developer based in Hamburg. Vue 3, Nuxt 4, Tailwind CSS, modern JavaScript. Available for freelance and contract work.',
+    },
+  ],
+  htmlAttrs: {
+    lang: 'en',
+  },
+})
+</script>
+
 <template>
   <main
     class="mx-auto pb-6 h-screen w-screen dark:bg-gray-900 bg-[url('/img/bg-template.png')] dark:bg-[url('/img/bg-dark-template.png')] bg-center bg-no-repeat bg-cover transition-all delay-150 duration-300 ease-in-out"
@@ -5,7 +22,7 @@
     <div class="backdrop-blur-sm min-h-screen w-full">
       <div class="flex flex-col min-h-screen h-full mx-auto justify-center items-center">
         <Header />
-        <div class="container flex w-full max-w-95/100 h-full mr-auto ml-6">
+        <div class="container flex w-full max-w-95/100 h-full mx-6">
           <NuxtPage />
         </div>
         <Footer />
@@ -46,11 +63,17 @@ main:has(.connect:hover) .disclaimer {
   color: aqua;
 }
 
+body:has(.connect:hover),
+body:has(.connect:hover) footer .legals {
+  color: ghostwhite !important;
+}
+
 h1 {
   font-family: 'Luckiest Guy';
   font-weight: 400;
   font-style: normal;
-  font-size: clamp(2.5rem, 11vw, 5rem);
+  font-size: clamp(2.5rem, 11vw, 4rem);
+  line-height: 1.15;
 }
 
 .logo img {
