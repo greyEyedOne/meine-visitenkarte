@@ -15,7 +15,9 @@ const buttonNames = [
 
 <template>
   <!-- Top panel -->
-  <div class="flex relative z-50 bg-transparent justify-between items-center w-full min-h-45">
+  <div
+    class="flex relative z-50 bg-transparent justify-between items-center w-full max-w-95/100 min-h-45"
+  >
     <NuxtLink to="/" class="logo-link">
       <div
         class="logo logo-mobile p-1 pt-0 h-full w-full border-2 border-solid border-white rounded-md"
@@ -40,7 +42,7 @@ const buttonNames = [
     </button>
 
     <!-- Desktop menu -->
-    <div class="hidden md:flex gap-2 w-full justify-end">
+    <div class="hidden md:flex gap-2 w-full max-w-95/100 justify-end">
       <NuxtLink
         v-for="(item, i) in buttonNames"
         :key="i"
@@ -168,11 +170,11 @@ button.menu {
   margin-right: 0.5rem;
 }
 
-.menu-mobile-content a {
+/* .menu-mobile-content a {
   box-shadow:
     rgba(255, 26, 26, 0.636) 0px 10px 15px -3px,
     rgb(61, 124, 43) 0px 4px 6px -4px;
-}
+} */
 
 .logo {
   position: fixed !important;
