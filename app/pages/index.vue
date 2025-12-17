@@ -23,6 +23,6 @@ useHead({
       Tailwind CSS <br />
       Bridging the gap between your ideas and a live website, together
     </p>
-    <Card />
+    <ConnectButton />
   </section>
 </template>
