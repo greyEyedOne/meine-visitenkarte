@@ -16,7 +16,7 @@ const buttonNames = [
 <template>
   <!-- Top panel -->
   <div
-    class="flex relative z-50 bg-transparent justify-between items-center w-full max-w-95/100 min-h-45"
+    class="flex relative z-50 bg-transparent justify-between items-center w-full max-w-95/100 mb-6 min-h-17 sm:min-h-20 md:min-h-22"
   >
     <NuxtLink to="/" class="logo-link">
       <div
@@ -176,10 +176,6 @@ button.menu {
     rgb(61, 124, 43) 0px 4px 6px -4px;
 } */
 
-.logo {
-  position: fixed !important;
-}
-
 .logo,
 .logo img {
   min-width: 30px;
@@ -188,7 +184,6 @@ button.menu {
   max-height: 132px;
   width: auto;
   height: 17vw;
-  position: static absolute;
   top: 0;
 }
 
