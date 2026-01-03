@@ -20,38 +20,80 @@
 
     <h2>2. Hosting und Zugriffsdaten</h2>
     <p>
-      Diese Website wird bei <strong>Vercel Inc.</strong>, 440 N Barranca Ave
-      #4133, Covina, CA 91723, USA gehostet. Beim Aufruf der Seiten übermittelt
-      Ihr Browser automatisch technische Zugriffsdaten (z. B.
-      Browsertyp/-version, verwendetes Betriebssystem, Referrer-URL,
-      Datum/Uhrzeit des Zugriffs, IP-Adresse). Diese Daten werden zur
-      technischen Bereitstellung und Sicherung des Betriebs verarbeitet und
-      keiner bestimmten Person zugeordnet.
+      Diese Website wird bei <strong>Vercel Inc.</strong>, 440 N Barranca Ave #4133, Covina, CA
+      91723, USA, gehostet.
+    </p>
+    <p>
+      Beim Aufruf dieser Website werden durch den Browser des Nutzers automatisch bestimmte
+      technische Zugriffsdaten übermittelt. Dazu gehören insbesondere Browsertyp und -version,
+      Betriebssystem, Referrer-URL, Datum und Uhrzeit des Zugriffs sowie die IP-Adresse.
+    </p>
+    <p>
+      Die Verarbeitung dieser Daten erfolgt ausschließlich, soweit dies zur Gewährleistung des
+      technischen Betriebs, der Stabilität und der Sicherheit der Website erforderlich ist. Eine
+      personenbezogene Auswertung findet nicht statt.
     </p>
 
-    <h2>3. Cookies und Tracking</h2>
+    <h2>3. Cookies und Webanalyse</h2>
     <p>
-      Es werden keine Cookies gesetzt und keine externen Analyse- oder
-      Tracking-Dienste verwendet.
+      Diese Website kann Cookies und ähnliche Technologien verwenden, die für den technischen
+      Betrieb der Website zwingend erforderlich sind.
+    </p>
+
+    <p>
+      Darüber hinaus können – vorbehaltlich Ihrer Einwilligung – anonymisierte Nutzungsdaten erhoben
+      werden, um die Nutzung der Website besser zu verstehen und deren Inhalte sowie Leistung zu
+      verbessern.
+    </p>
+
+    <p>Zu diesen Nutzungsdaten können insbesondere gehören:</p>
+
+    <ul>
+      <li>besuchte Seiten und Navigationspfade,</li>
+      <li>Referrer-URLs (Informationen darüber, wie Sie auf die Website gelangt sind),</li>
+      <li>ungefähre geografische Herkunft (z. B. Land oder Region),</li>
+      <li>Informationen zu Endgerät und Browser,</li>
+      <li>aggregierte Verweildauer auf einzelnen Seiten.</li>
+    </ul>
+
+    <p>
+      Die Verarbeitung dieser Daten erfolgt ausschließlich in aggregierter Form und erlaubt keine
+      direkte Identifizierung einzelner Nutzer.
+    </p>
+
+    <p>
+      Webanalyse-Tools werden erst nach Erteilung Ihrer ausdrücklichen Einwilligung über das
+      Cookie-Consent-Banner aktiviert. Sie können Ihre Einwilligung jederzeit mit Wirkung für die
+      Zukunft widerrufen.
     </p>
 
     <h2>4. Ihre Rechte</h2>
     <p>
-      Sie haben nach der DSGVO das Recht auf Auskunft, Berichtigung, Löschung,
-      Einschränkung der Verarbeitung sowie Datenübertragbarkeit. Zudem haben Sie
-      ein Beschwerderecht bei einer Aufsichtsbehörde. Für Anfragen genügt eine
-      E-Mail an
+      Sie haben im Rahmen der geltenden datenschutzrechtlichen Bestimmungen insbesondere das Recht
+      auf Auskunft über die Sie betreffenden personenbezogenen Daten sowie auf Berichtigung,
+      Löschung, Einschränkung der Verarbeitung und Datenübertragbarkeit.
+    </p>
+    <p>
+      Darüber hinaus steht Ihnen ein Beschwerderecht bei einer zuständigen Aufsichtsbehörde zu. Bei
+      Fragen zum Datenschutz können Sie sich jederzeit unter folgender E-Mail-Adresse an uns wenden:
       <a href="mailto:info@your-websmith.de">info@your-websmith.de</a>.
     </p>
 
-    <h2>5. Änderungen</h2>
+    <h2>5. Änderungen dieser Datenschutzerklärung</h2>
     <p>
-      Diese Datenschutzerklärung kann bei Bedarf aktualisiert werden, um sie an
-      rechtliche oder technische Entwicklungen anzupassen.
+      Diese Datenschutzerklärung kann bei Bedarf angepasst werden, um rechtliche, technische oder
+      organisatorische Änderungen zu berücksichtigen.
+    </p>
+    <p>
+      Die jeweils aktuelle Fassung dieser Datenschutzerklärung ist jederzeit auf dieser Website
+      abrufbar.
     </p>
 
-    <NuxtLink to="/en/privacy-policy" class="underline"
-    >English version</NuxtLink
-    >
+    <p>
+      Die weitere Nutzung der Website nach einer Änderung dieser Datenschutzerklärung gilt als
+      Kenntnisnahme der aktualisierten Inhalte.
+    </p>
+
+    <NuxtLink to="/en/privacy-policy" class="underline">English version</NuxtLink>
   </div>
 </template>
