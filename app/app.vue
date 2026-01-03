@@ -137,7 +137,7 @@ h1 {
   width: 100%;
   height: 100%;
   --angle: 0deg;
-  background-image: conic-gradient(from var(--angle), yellow, cyan, magenta, yellow);
+  background-image: conic-gradient(from var(--angle), #ffff0050, #00ffff50, #ff00ff50, #ffff0050);
   animation: borderAnimation 5s linear infinite;
   top: 50%;
   left: 50%;
