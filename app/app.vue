@@ -34,6 +34,12 @@ useHead({
   initial-value: 0deg;
 }
 
+@property --angle {
+  syntax: '<angle>';
+  inherits: true;
+  initial-value: 0deg;
+}
+
 body {
   overflow-x: clip;
 }
