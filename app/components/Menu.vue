@@ -191,5 +191,6 @@ button.menu {
   font-weight: 400;
   letter-spacing: 0.85px;
   font-style: normal;
+  animation: glitchMove 2s infinite ease-in-out alternate;
 }
 </style>

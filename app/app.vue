@@ -34,6 +34,12 @@ useHead({
 </template>
 
 <style>
+@property --angle {
+  syntax: '<angle>';
+  inherits: true;
+  initial-value: 0deg;
+}
+
 body {
   overflow-x: clip;
 }
@@ -100,10 +106,6 @@ h1 {
   z-index: 1000;
 }
 
-.connect {
-  animation: glitchMove 2s infinite ease-in-out alternate;
-}
-
 @keyframes glitchMove {
   0%,
   100% {
@@ -121,6 +123,37 @@ h1 {
   75% {
     transform: translate(1px, -0.5px);
     opacity: 0.6;
+  }
+}
+
+.connect {
+  position: relative;
+}
+.connect::after,
+.connect::before {
+  border-radius: inherit;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  --angle: 0deg;
+  background-image: conic-gradient(from var(--angle), #ffff0050, #00ffff50, #ff00ff50, #ffff0050);
+  animation: borderAnimation 5s linear infinite;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1 !important;
+  padding: 1px;
+  box-sizing: unset;
+}
+
+.connect::after {
+  filter: blur(8px);
+}
+
+@keyframes borderAnimation {
+  to {
+    --angle: 360deg;
   }
 }
 </style>
