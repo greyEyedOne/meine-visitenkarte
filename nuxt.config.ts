@@ -18,7 +18,13 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
-  modules: ['@nuxt/eslint', '@nuxt/image', '@nuxt/test-utils', '@nuxt/ui'],
+  modules: [
+    '@nuxt/eslint',
+    '@nuxt/image',
+    '@nuxt/test-utils',
+    '@nuxt/ui',
+    '@weareheavy/nuxt-cookie-consent',
+  ],
   vite: {
     plugins: [svgLoader()],
   },
