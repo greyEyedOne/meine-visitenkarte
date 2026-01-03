@@ -22,10 +22,7 @@
         </a>
       </p>
 
-      <p>
-        Dies ist eine nicht kommerzielle, persönliche Website, die ausschließlich der Darstellung
-        von Projekten und Arbeiten dient.
-      </p>
+      <p>Diese Website dient der Darstellung beruflicher Projekte und Arbeiten.</p>
 
       <p>
         <strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong><br />
@@ -48,10 +45,9 @@
 
       <h3 class="font-semibold mt-4">Datenschutz</h3>
       <p>
-        Diese Website verwendet keine Cookies und erhebt keine personenbezogenen Daten. Beim Aufruf
-        der Seiten werden nur technisch notwendige Informationen (z.&nbsp;B. IP-Adresse, Browsertyp)
-        durch den Server erfasst und nicht ausgewertet oder gespeichert. Für Fragen zum Datenschutz
-        wenden Sie sich bitte an die oben genannte E-Mail-Adresse.
+        Informationen zum Datenschutz und zur Verarbeitung personenbezogener Daten sind in der
+        <a href="/datenschutzerklaerung" class="underline">Datenschutzerklärung</a>
+        dieser Website zu finden.
       </p>
     </section>
 
@@ -77,9 +73,7 @@
         </a>
       </p>
 
-      <p>
-        This is a non-commercial personal website presenting selected projects and work examples.
-      </p>
+      <p>This website serves to present professional projects and work examples.</p>
 
       <p>
         <strong>Responsible for content according to § 55 (2) RStV:</strong><br />
@@ -100,10 +94,9 @@
 
       <h3 class="font-semibold mt-4">Privacy Notice</h3>
       <p>
-        This website does not use cookies or collect personal data. When accessing the pages, only
-        technically necessary information (e.g. IP address, browser type) is processed by the server
-        and not stored or analyzed. For any privacy inquiries, please contact the above email
-        address.
+        Information on data protection and the processing of personal data can be found in the
+        <a href="/en/privacy-policy" class="underline">Privacy Policy</a>
+        of this website.
       </p>
     </section>
   </div>
