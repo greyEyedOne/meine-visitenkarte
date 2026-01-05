@@ -13,54 +13,35 @@ const emit = defineEmits<{
 </script>
 
 <template>
-  <div role="dialog" aria-live="polite" class="cookie-banner">
-    <p>
+  <div
+    role="dialog"
+    aria-live="polite"
+    class="cookie-banner sticky bottom-0 !mt-5 m-4 p-4 bg-white dark:bg-gray-800 border dark:border-orange-50 rounded-[10px] shadow-lg"
+  >
+    <p class="text-black dark:text-white">
       {{ text }}
     </p>
 
-    <div class="cookie-actions">
-      <button type="button" @click="emit('accept')">
+    <div class="cookie-actions flex gap-4">
+      <button
+        type="button"
+        class="bg-green-50 dark:bg-green-900 text-black dark:text-white opacity-100 my-4 px-4 py-2 rounded cursor-pointer"
+        @click="emit('accept')"
+      >
         {{ acceptLabel }}
       </button>
 
-      <button type="button" @click="emit('reject')">
+      <button
+        type="button"
+        class="bg-red-50 dark:bg-red-900 text-black dark:text-white opacity-100 my-4 px-4 py-2 rounded cursor-pointer"
+        @click="emit('reject')"
+      >
         {{ rejectLabel }}
       </button>
     </div>
 
-    <a :href="policyLink">
+    <a :href="policyLink" class="text-sm underline decoration-[0.5px]">
       {{ policyLabel }}
     </a>
   </div>
 </template>
-<style scoped>
-.cookie-banner {
-  position: fixed;
-  bottom: 0 !important;
-  margin-top: 20px !important;
-  background: white;
-  margin: 1rem;
-  padding: 1rem;
-  border: 1px solid aliceblue;
-  border-radius: 10px;
-}
-
-.cookie-actions button {
-  margin: 1rem 0;
-  background: #efefef55;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  cursor: pointer;
-}
-
-.cookie-banner a {
-  font-size: smaller;
-  text-decoration: underline;
-  text-decoration-thickness: 0.5px;
-}
-
-.cookie-actions {
-  display: flex;
-  gap: 1rem;
-}
-</style>
