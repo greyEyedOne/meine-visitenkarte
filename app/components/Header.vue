@@ -9,7 +9,7 @@ const excludeDisclaimerOn = [
   '/en/privacy-policy',
   '/datenschutzerklaerung',
   '/en/imprint',
-  'impressum',
+  '/impressum',
 ]
 console.log(route.path)
 </script>
