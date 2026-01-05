@@ -141,6 +141,19 @@ h1 {
   box-sizing: unset;
 }
 
+@media (prefers-color-scheme: dark) {
+  .connect::after,
+  .connect::before {
+    background-image: conic-gradient(
+      from var(--angle),
+      #ffff00aa,
+      #00ffffaa,
+      #ff00ffaa,
+      #ffff00aa
+    ) !important;
+  }
+}
+
 .connect::after {
   filter: blur(8px);
 }
