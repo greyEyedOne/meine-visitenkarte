@@ -8,7 +8,7 @@
   <div class="text-gray-600 dark:text-white">
     <h1>Datenschutzerklärung</h1>
 
-    <p><strong>Stand:</strong> 13. Oktober 2025</p>
+    <p><strong>Stand:</strong> 4. Januar 2026</p>
 
     <h2>1. Verantwortliche Stelle</h2>
     <p>
@@ -93,7 +93,9 @@
       Die weitere Nutzung der Website nach einer Änderung dieser Datenschutzerklärung gilt als
       Kenntnisnahme der aktualisierten Inhalte.
     </p>
+    <br />
 
-    <NuxtLink to="/en/privacy-policy" class="underline">English version</NuxtLink>
+    <NuxtLink to="/en/privacy-policy" class="underline">English version</NuxtLink><br />
+    <NuxtLink to="/impressum" class="underline"> Impressum</NuxtLink>
   </div>
 </template>
