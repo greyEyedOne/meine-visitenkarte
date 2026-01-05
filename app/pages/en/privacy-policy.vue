@@ -2,7 +2,7 @@
   <div class="text-gray-600 dark:text-white">
     <h1>Privacy Policy</h1>
 
-    <p><strong>Last updated:</strong> January 3, 2026</p>
+    <p><strong>Last updated:</strong> January 4, 2026</p>
 
     <h2>1. Responsible Entity</h2>
     <p>
@@ -82,6 +82,8 @@
       taken note of the changes.
     </p>
 
-    <NuxtLink to="/datenschutzerklaerung" class="underline"> Deutsche Version </NuxtLink>
+    <br />
+    <NuxtLink to="/datenschutzerklaerung" class="underline"> Deutsche Version </NuxtLink><br />
+    <NuxtLink to="/en/imprint" class="underline">Imprint</NuxtLink>
   </div>
 </template>
