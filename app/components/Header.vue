@@ -2,7 +2,16 @@
 import { useRoute } from 'vue-router'
 const route = useRoute()
 
-const excludeDisclaimerOn = ['/', '/contacts', '/about']
+const excludeDisclaimerOn = [
+  '/',
+  '/contacts',
+  '/about',
+  '/en/privacy-policy',
+  '/datenschutzerklaerung',
+  '/en/imprint',
+  '/impressum',
+]
+console.log(route.path)
 </script>
 
 <template>
