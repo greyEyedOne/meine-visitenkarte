@@ -17,6 +17,7 @@ useHead({
 </script>
 
 <template>
+  <link rel="preload" as="image" href="/img/bg-ready-project.png" />
   <main
     class="mx-auto pb-6 h-screen w-screen dark:bg-gray-900 bg-[url('/img/bg-template.png')] dark:bg-[url('/img/bg-dark-template.png')] bg-center bg-no-repeat bg-cover transition-all delay-150 duration-300 ease-in-out"
   >
