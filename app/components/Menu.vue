@@ -130,6 +130,7 @@ const buttonNames = [
   font-size: 2.5vw;
   z-index: 0;
   top: -0.5vw;
+  filter: blur(1px);
 }
 
 .container {
