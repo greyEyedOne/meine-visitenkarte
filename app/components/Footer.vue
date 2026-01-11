@@ -9,7 +9,8 @@
         >Let's discuss your task</NuxtLink
         >
         | <NuxtLink to="/en/privacy-policy">Privacy Policy</NuxtLink> |
-        <NuxtLink to="/en/imprint">Imprint</NuxtLink>
+        <NuxtLink to="/en/imprint">Imprint</NuxtLink> |
+        <button onclick="klaro.show()">Cookie settings</button>
       </div>
       <p class="about text-center my-2 font-thin">
         Operating as a freelance software developer in Germany. <br />Based in Hamburg, Germany · EU
