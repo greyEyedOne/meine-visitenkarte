@@ -35,6 +35,15 @@ useHead({
   initial-value: 0deg;
 }
 
+@font-face {
+  font-family: 'Luckiest Guy';
+  src:
+    url('/fonts/Luckiest_Guy/luckiestguy-regular-webfont.woff2') format('woff2'),
+    url('/fonts/Luckiest_Guy/luckiestguy-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   overflow-x: clip;
 }
