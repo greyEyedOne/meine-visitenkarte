@@ -77,7 +77,7 @@ window.klaroConfig = {
   // If "mustConsent" is set to true, Klaro will directly display the consent
   // manager modal and not allow the user to close it before having actively
   // consented or declines the use of third-party services.
-  mustConsent: true,
+  mustConsent: false,
 
   // Show "accept all" to accept all services instead of "ok" that only accepts
   // required and "default: true" services
@@ -126,6 +126,7 @@ window.klaroConfig = {
     de: {
       privacyPolicyUrl: '/datenschutzerklaerung',
       consentModal: {
+        title: '<u>Datenschutzeinstellungen</u>',
         description:
           'Hier können Sie einsehen und anpassen, welche Information wir über Sie sammeln. Einträge die als "Beispiel" gekennzeichnet sind dienen lediglich zu Demonstrationszwecken und werden nicht wirklich verwendet.',
       },
@@ -154,7 +155,7 @@ window.klaroConfig = {
     },
     en: {
       consentModal: {
-        title: '<u>test</u>',
+        title: '<u>Privacy settings</u>',
         description:
           'Here you can see and customize the information that we collect about you. Entries marked as "Example" are just for demonstration purposes and are not really used on this website.',
       },
