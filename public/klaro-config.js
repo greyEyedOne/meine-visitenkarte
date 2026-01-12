@@ -77,7 +77,7 @@ window.klaroConfig = {
   // If "mustConsent" is set to true, Klaro will directly display the consent
   // manager modal and not allow the user to close it before having actively
   // consented or declines the use of third-party services.
-  mustConsent: false,
+  mustConsent: true,
 
   // Show "accept all" to accept all services instead of "ok" that only accepts
   // required and "default: true" services
@@ -135,24 +135,11 @@ window.klaroConfig = {
       externalTracker: {
         description: 'Beispiel für ein externes Tracking Skript',
       },
-      adsense: {
-        description: 'Anzeigen von Werbeanzeigen (Beispiel)',
-        title: 'Google AdSense Werbezeugs',
-      },
       matomo: {
         description: 'Sammeln von Besucherstatistiken',
       },
-      camera: {
-        description: 'Eine Überwachungskamera (nur ein Beispiel zu IMG-Tags)',
-      },
       cloudflare: {
         description: 'Schutz gegen DDoS-Angriffe',
-      },
-      intercom: {
-        description: 'Chat Widget & Sammeln von Besucherstatistiken (nur ein Beispiel)',
-      },
-      mouseflow: {
-        description: 'Echtzeit-Benutzeranalyse (nur ein Beispiel)',
       },
       googleFonts: {
         description: 'Web-Schriftarten von Google gehostet',
@@ -177,24 +164,13 @@ window.klaroConfig = {
       externalTracker: {
         description: 'Example of an external tracking script',
       },
-      adsense: {
-        description: 'Displaying of advertisements (just an example)',
-        title: 'Google Adsense Advertisement',
-      },
+
       matomo: {
         description: 'Collecting of visitor statistics',
       },
-      camera: {
-        description: 'A surveillance camera (just an example for an IMG tag)',
-      },
+
       cloudflare: {
         description: 'Protection against DDoS attacks',
-      },
-      intercom: {
-        description: 'Chat widget & collecting of visitor statistics (just an example)',
-      },
-      mouseflow: {
-        description: 'Real-Time user analytics (just an example)',
       },
       googleFonts: {
         description: 'Web fonts hosted by Google',
@@ -290,20 +266,15 @@ window.klaroConfig = {
       callback: function (consent, service) {
         console.log(`User consent for service ${service.name}: consent=${consent}`)
         // Notify the app about the consent change so it can mount/unmount analytics
-        if (typeof window !== 'undefined') {
-          window.dispatchEvent(
-            new CustomEvent('klaro-consent-changed', {
-              detail: { service: service.name, consent: consent },
-            }),
-          )
-        }
+
         if (typeof window !== 'undefined' && service.name === 'vercel-analytics') {
           const selector = 'script[data-analytics="vercel"]'
           if (consent === true) {
             if (!document.querySelector(selector)) {
               const s = document.createElement('script')
               // This is the default path the Vercel package uses for the insights script
-              s.src = '/_vercel/insights/script.js'
+              s.src = 'https://va.vercel-scripts.com/v1/script.js'
+
               s.defer = true
               s.dataset.analytics = 'vercel'
               document.head.appendChild(s)
@@ -336,7 +307,8 @@ window.klaroConfig = {
           if (consent === true) {
             if (!document.querySelector(selector)) {
               const s = document.createElement('script')
-              s.src = '/_vercel/speed-insights/script.js'
+              s.src = 'https://va.vercel-scripts.com/v1/speed-insights/script.js'
+
               s.defer = true
               s.dataset.analytics = 'vercel-speed'
               document.head.appendChild(s)
@@ -350,12 +322,6 @@ window.klaroConfig = {
               // ignore
             }
           }
-
-          window.dispatchEvent(
-            new CustomEvent('klaro-consent-changed', {
-              detail: { service: service.name, consent: consent },
-            }),
-          )
         }
       },
     },
