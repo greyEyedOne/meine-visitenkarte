@@ -17,6 +17,7 @@ useHead({
 </script>
 
 <template>
+  <link rel="preload" as="image" href="/img/bg-ready-project.png" />
   <main
     class="mx-auto pb-6 h-screen w-screen dark:bg-gray-900 bg-[url('/img/bg-template.png')] dark:bg-[url('/img/bg-dark-template.png')] bg-center bg-no-repeat bg-cover transition-all delay-150 duration-300 ease-in-out"
   >
@@ -32,6 +33,15 @@ useHead({
   syntax: '<angle>';
   inherits: true;
   initial-value: 0deg;
+}
+
+@font-face {
+  font-family: 'Luckiest Guy';
+  src:
+    url('/fonts/Luckiest_Guy/luckiestguy-regular-webfont.woff2') format('woff2'),
+    url('/fonts/Luckiest_Guy/luckiestguy-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
@@ -139,6 +149,19 @@ h1 {
   z-index: -1 !important;
   padding: 1px;
   box-sizing: unset;
+}
+
+@media (prefers-color-scheme: dark) {
+  .connect::after,
+  .connect::before {
+    background-image: conic-gradient(
+      from var(--angle),
+      #ffff00aa,
+      #00ffffaa,
+      #ff00ffaa,
+      #ffff00aa
+    ) !important;
+  }
 }
 
 .connect::after {
