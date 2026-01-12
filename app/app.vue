@@ -1,5 +1,4 @@
 <script setup>
-import { SpeedInsights } from '@vercel/speed-insights/nuxt'
 useHead({
   titleTemplate: (title) =>
     title ? `${title} · Dara Appel` : 'Dara Appel – Frontend Developer in Hamburg',
@@ -25,7 +24,6 @@ useHead({
       <NuxtLayout />
     </div>
   </main>
-  <SpeedInsights />
 </template>
 
 <style>
