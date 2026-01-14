@@ -4,6 +4,17 @@ export default defineNuxtConfig({
   app: {
     head: {
       link: [],
+      script: [
+        {
+          src: '/klaro-config.js',
+          type: 'text/javascript',
+        },
+        {
+          src: 'https://cdn.kiprotect.com/klaro/v0.7.22/klaro.js', // replace with min-css later
+          type: 'text/javascript',
+          defer: true,
+        },
+      ],
     },
   },
   compatibilityDate: '2025-07-15',
