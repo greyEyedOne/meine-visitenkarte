@@ -17,11 +17,10 @@ useHead({
 </script>
 
 <template>
-  <link rel="preload" as="image" href="/img/bg-ready-project.png" />
   <main
-    class="mx-auto pb-6 h-screen w-screen dark:bg-gray-900 bg-[url('/img/bg-template.png')] dark:bg-[url('/img/bg-dark-template.png')] bg-center bg-no-repeat bg-cover transition-all delay-150 duration-300 ease-in-out"
+    class="mx-auto pb-6 h-screen w-screen dark:bg-gray-900 bg-center bg-no-repeat bg-cover transition-all delay-150 duration-300 ease-in-out"
   >
-    <div class="backdrop-blur-sm min-h-screen w-full">
+    <div class="min-h-screen w-full bg-[url('/img/bg-ready-project.png')]">
       <NuxtLayout />
     </div>
   </main>
@@ -52,32 +51,34 @@ main {
   transition: all 0.25s ease-in-out;
 }
 
-main:has(.connect:hover) {
-  background-image: url('/img/bg-ready-project.png');
-}
+@media (hover: hover) and (pointer: fine) {
+  main:has(.connect:hover) > div > div {
+    background-image: none;
+  }
 
-main:has(.connect:hover) .card {
-  background: #cbd5e1c5;
-  color: #312e81;
-}
+  main:has(.connect:hover) .card {
+    background: #cbd5e1c5;
+    color: #312e81;
+  }
 
-main:has(.connect:hover) .menu-item {
-  color: ghostwhite;
-}
+  main:has(.connect:hover) .menu-item {
+    color: ghostwhite;
+  }
 
-main:has(.connect:hover) .card h1,
-main:has(.connect:hover) .card h2,
-main:has(.connect:hover) .card p {
-  color: #312e81;
-}
+  main:has(.connect:hover) .card h1,
+  main:has(.connect:hover) .card h2,
+  main:has(.connect:hover) .card p {
+    color: #312e81;
+  }
 
-main:has(.connect:hover) .disclaimer {
-  color: aqua;
-}
+  main:has(.connect:hover) .disclaimer {
+    color: aqua;
+  }
 
-body:has(.connect:hover),
-body:has(.connect:hover) footer .legals {
-  color: ghostwhite !important;
+  body:has(.connect:hover),
+  body:has(.connect:hover) footer .legals {
+    color: ghostwhite !important;
+  }
 }
 
 h1 {
