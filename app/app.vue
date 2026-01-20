@@ -1,5 +1,4 @@
 <script setup>
-import { SpeedInsights } from '@vercel/speed-insights/nuxt'
 useHead({
   titleTemplate: (title) =>
     title ? `${title} · Dara Appel` : 'Dara Appel – Frontend Developer in Hamburg',
@@ -20,11 +19,10 @@ useHead({
   <main
     class="mx-auto pb-6 h-screen w-screen dark:bg-gray-900 bg-center bg-no-repeat bg-cover transition-all delay-150 duration-300 ease-in-out"
   >
-    <div class="min-h-screen w-full bg-[url('/img/bg-ready-project.png')]">
+    <div class="backdrop-blur-sm min-h-screen w-full">
       <NuxtLayout />
     </div>
   </main>
-  <SpeedInsights />
 </template>
 
 <style>

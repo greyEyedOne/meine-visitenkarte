@@ -58,6 +58,12 @@
       consent banner. You may withdraw your consent at any time with effect for the future.
     </p>
 
+    <p>
+      Consent management for cookies and similar technologies is provided by Klaro, an open-source
+      consent management platform. Klaro ensures that analytics and other non-essential services are
+      only activated after explicit user consent.
+    </p>
+
     <h2>4. Your Rights</h2>
     <p>
       In accordance with the General Data Protection Regulation (GDPR), you have the right to obtain
@@ -80,6 +86,11 @@
     <p>
       Continued use of the website after an update to this privacy policy indicates that you have
       taken note of the changes.
+    </p>
+
+    <p>
+      You can <button onclick="klaro.show()">adjust or withdraw</button> your consent at any time
+      via the consent management interface provided on this website.
     </p>
 
     <br />

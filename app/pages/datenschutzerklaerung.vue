@@ -67,6 +67,12 @@
       Zukunft widerrufen.
     </p>
 
+    <p>
+      Die Verwaltung der Einwilligungen für Cookies und ähnliche Technologien erfolgt über Klaro,
+      eine Open-Source-Consent-Management-Plattform. Klaro stellt sicher, dass Analyse- und andere
+      nicht notwendige Dienste erst nach Ihrer ausdrücklichen Einwilligung aktiviert werden.
+    </p>
+
     <h2>4. Ihre Rechte</h2>
     <p>
       Sie haben im Rahmen der geltenden datenschutzrechtlichen Bestimmungen insbesondere das Recht
@@ -93,6 +99,11 @@
       Die weitere Nutzung der Website nach einer Änderung dieser Datenschutzerklärung gilt als
       Kenntnisnahme der aktualisierten Inhalte.
     </p>
+    <p>
+      Sie können Ihre Einwilligung jederzeit über die auf dieser Website bereitgestellte
+      Einwilligungsverwaltung <button onclick="klaro.show()">ändern oder widerrufen</button>.
+    </p>
+
     <br />
 
     <NuxtLink to="/en/privacy-policy" class="underline">English version</NuxtLink><br />
