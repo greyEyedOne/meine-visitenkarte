@@ -14,7 +14,7 @@
       </div>
       <p class="about text-center my-2 font-thin">
         Operating as a freelance software developer in Germany. <br />Based in Hamburg, Germany ·
-        Timezone CET
+        CET Time Zone (UTC+1)
       </p>
       <div class="text-gray-400 text-xs font-thin text-center mb-2">Made by Dara Appel, 2025</div>
     </div>
