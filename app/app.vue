@@ -42,6 +42,33 @@ useHead({
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'sansationregular';
+  src:
+    url('/fonts/sansation/sansation-regular-webfont.woff2') format('woff2'),
+    url('/fonts/sansation/sansation-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'sansation_lightlight';
+  src:
+    url('/fonts/sansation/sansation-light-webfont.woff2') format('woff2'),
+    url('/fonts/sansation/sansation-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'sansationbold';
+  src:
+    url('/fonts/sansation/sansation-bold-webfont.woff2') format('woff2'),
+    url('/fonts/sansation/sansation-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   overflow-x: clip;
 }
@@ -79,11 +106,11 @@ body:has(.connect:hover) footer .legals {
 }
 
 h1 {
-  font-family: 'Luckiest Guy';
-  font-weight: 400;
+  font-family: 'sansationbold';
   font-style: normal;
-  font-size: clamp(2.5rem, 11vw, 4rem);
+  font-size: clamp(2.25rem, 9vw, 3.25rem);
   line-height: 1.15;
+  letter-spacing: 2.5px;
 }
 
 .logo img {
@@ -169,6 +196,79 @@ h1 {
 @keyframes borderAnimation {
   to {
     --angle: 360deg;
+  }
+}
+
+.menu-item {
+  font-family: sansation_lightlight;
+  letter-spacing: 1px;
+  font-variant: all-petite-caps;
+}
+
+footer .legals a {
+  font-family: sansationregular;
+  letter-spacing: 1px;
+  font-size: small;
+}
+
+.about {
+  font-size: small;
+}
+
+footer button {
+  cursor: pointer;
+  font-size: small;
+}
+
+.container {
+  row-gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+}
+
+.content p {
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  /* font-size: clamp(2.25rem, 9vw, 3.25rem); */
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  margin-top: 5vh;
+  margin-bottom: 4vh;
+}
+
+/* Inline | http://localhost:3000/ */
+
+h1 span {
+  font-size: clamp(1.25rem, 4.5vw, 1.75rem);
+}
+
+/* Inline | http://localhost:3000/ */
+
+.content p {
+  font-size: clamp(1.25rem, 1.7vw, 1.75rem);
+  font-weight: 100;
+}
+
+@media (orientation: landscape) {
+  .top-panel {
+    margin-bottom: 1vh;
+  }
+
+  .logo,
+  .logo img {
+    height: 17vh !important;
   }
 }
 </style>

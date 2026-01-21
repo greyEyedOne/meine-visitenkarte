@@ -12,10 +12,10 @@ useHead({
 </script>
 
 <template>
-  <section>
-    <h1>
-      Dara Appel – Your Websmith <br />
-      <span class="font-sans text-lg">Frontend Developer in Hamburg</span>
+  <div class="content">
+    <h1 class="uppercase mb-4">
+      Dara Appel – Your Websmith
+      <span class="w-full block font-sans text-lg">Frontend Developer in Hamburg</span>
     </h1>
 
     <p>
@@ -24,5 +24,5 @@ useHead({
       Bridging the gap between your ideas and a live website, together
     </p>
     <ConnectButton />
-  </section>
+  </div>
 </template>

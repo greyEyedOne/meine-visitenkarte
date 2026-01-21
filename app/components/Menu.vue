@@ -6,17 +6,16 @@ const isMenuOpen = ref(false)
 const buttonNames = [
   { title: 'Home', link: '/' },
   { title: 'About me', link: '/about' },
-  { title: 'Meet my CV', link: '/cv' },
   { title: 'Portfolio', link: '/portfolio' },
   { title: "Let's talk", link: '/contacts', class: 'cta dark:text-lime-600 text-green-800' },
-  { title: 'Blog', link: '/blog' },
+  // { title: 'Blog', link: '/blog' },
 ]
 </script>
 
 <template>
   <!-- Top panel -->
   <div
-    class="flex relative z-50 bg-transparent justify-between items-center w-full max-w-95/100 mb-6 min-h-17 sm:min-h-20 md:min-h-22"
+    class="top-panel flex relative z-50 bg-transparent justify-between items-center w-full max-w-95/100 mb-6"
   >
     <NuxtLink to="/" class="logo-link">
       <div
@@ -49,7 +48,7 @@ const buttonNames = [
         :to="item.link"
         :class="[
           item.class,
-          'menu-item px-4 py-2 rounded-xs text-black uppercase dark:text-white hover:opacity-80',
+          'menu-item md:text-lg px-4 py-2 rounded-xs text-black uppercase dark:text-white hover:opacity-80',
         ]"
         :data-text="item.title"
       >
@@ -99,7 +98,6 @@ const buttonNames = [
 }
 
 .menu-item {
-  font-size: 2vw;
   font-weight: 100;
   position: relative;
   text-transform: lowercase;
