@@ -6,7 +6,7 @@ useHead({
     {
       name: 'description',
       content:
-        'Frontend Developer based in Hamburg. Vue 3, Nuxt 4, Tailwind CSS, modern JavaScript. Available for freelance and contract work.',
+        'Frontend Developer based in Hamburg. React, Vue 3, Nuxt 4, Tailwind CSS, modern JavaScript. Available for freelance and contract work.',
     },
   ],
   htmlAttrs: {
@@ -17,12 +17,8 @@ useHead({
 
 <template>
   <link rel="preload" as="image" href="/img/bg-ready-project.png" />
-  <main
-    class="mx-auto pb-6 h-screen w-screen dark:bg-gray-900 bg-[url('/img/bg-template.png')] dark:bg-[url('/img/bg-dark-template.png')] bg-center bg-no-repeat bg-cover transition-all delay-150 duration-300 ease-in-out"
-  >
-    <div class="backdrop-blur-sm min-h-screen w-full">
-      <NuxtLayout />
-    </div>
+  <main class="mx-auto min-h-screen w-screen transition-all delay-150 duration-300 ease-in-out">
+    <NuxtLayout />
   </main>
 </template>
 
@@ -77,33 +73,29 @@ main {
   transition: all 0.25s ease-in-out;
 }
 
-main:has(.connect:hover) {
-  background-image: url('/img/bg-ready-project.png');
+header {
+  background: rgba(11, 150, 192, 4.1);
+  background: rgb(11, 150, 192);
 }
 
-main:has(.connect:hover) .card {
-  background: #cbd5e1c5;
-  color: #312e81;
+.content {
+  background: linear-gradient(
+    180deg,
+    rgb(11, 150, 192) 1%,
+    rgba(213, 233, 240, 1) 26%,
+    rgba(249, 247, 239, 1) 45%,
+    rgba(253, 231, 178, 1) 75%,
+    rgba(156, 179, 185, 1) 96%
+  );
 }
 
-main:has(.connect:hover) .menu-item {
-  color: ghostwhite;
+footer {
+  background: linear-gradient(180deg, rgba(156, 179, 185, 1) 51%, rgba(117, 140, 147, 1) 90%);
 }
 
-main:has(.connect:hover) .card h1,
-main:has(.connect:hover) .card h2,
-main:has(.connect:hover) .card p {
-  color: #312e81;
-}
-
-main:has(.connect:hover) .disclaimer {
-  color: aqua;
-}
-
-body:has(.connect:hover),
-body:has(.connect:hover) footer .legals {
-  color: ghostwhite !important;
-}
+/* main:has(.connect:hover) .content h1,
+main:has(.connect:hover) .content p {
+} */
 
 h1 {
   font-family: 'sansationbold';
@@ -115,10 +107,12 @@ h1 {
 
 .logo img {
   box-shadow: none !important;
+  opacity: 0.8;
 }
 
 .container {
   padding: 1rem;
+  max-width: 1150px;
 }
 
 .menu-mobile > div {
@@ -155,44 +149,6 @@ h1 {
   }
 }
 
-.connect {
-  position: relative;
-}
-.connect::after,
-.connect::before {
-  border-radius: inherit;
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  --angle: 0deg;
-  background-image: conic-gradient(from var(--angle), #ffff0050, #00ffff50, #ff00ff50, #ffff0050);
-  animation: borderAnimation 5s linear infinite;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1 !important;
-  padding: 1px;
-  box-sizing: unset;
-}
-
-@media (prefers-color-scheme: dark) {
-  .connect::after,
-  .connect::before {
-    background-image: conic-gradient(
-      from var(--angle),
-      #ffff00aa,
-      #00ffffaa,
-      #ff00ffaa,
-      #ffff00aa
-    ) !important;
-  }
-}
-
-.connect::after {
-  filter: blur(8px);
-}
-
 @keyframes borderAnimation {
   to {
     --angle: 360deg;
@@ -211,6 +167,11 @@ footer .legals a {
   font-size: small;
 }
 
+footer .legals a:hover,
+footer .legals button:hover {
+  color: black;
+}
+
 .about {
   font-size: small;
 }
@@ -221,12 +182,16 @@ footer button {
 }
 
 .container {
-  row-gap: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  padding: 0 1rem;
   margin-inline: auto;
+}
+
+.content > .container {
+  margin-top: 4vh;
+  margin-bottom: 4vh;
 }
 
 .content p {
@@ -235,26 +200,16 @@ footer button {
   margin-bottom: 0.5rem;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-}
-
 h1 {
   text-align: center;
-  /* font-size: clamp(2.25rem, 9vw, 3.25rem); */
   font-size: clamp(2.25rem, 5vw, 4rem);
-  margin-top: 5vh;
+  margin-top: 2vh;
   margin-bottom: 4vh;
 }
-
-/* Inline | http://localhost:3000/ */
 
 h1 span {
   font-size: clamp(1.25rem, 4.5vw, 1.75rem);
 }
-
-/* Inline | http://localhost:3000/ */
 
 .content p {
   font-size: clamp(1.25rem, 1.7vw, 1.75rem);
@@ -269,6 +224,32 @@ h1 span {
   .logo,
   .logo img {
     height: 17vh !important;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  header {
+    background: linear-gradient(180deg, #172250 5%, #1f2b5d 86%);
+  }
+
+  .content {
+    background: linear-gradient(
+      180deg,
+      #1f2b5d 6%,
+      #866997 63%,
+      #ee8062 89%,
+      #da4e40 95%,
+      #6d364c 99%
+    );
+  }
+
+  footer {
+    background: linear-gradient(180deg, #573044 4%, #321622 25%, #0a0710 90%);
+  }
+
+  footer .legals a:hover,
+  footer .legals button:hover {
+    color: white;
   }
 }
 </style>

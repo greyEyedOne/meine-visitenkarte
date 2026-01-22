@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>About me</h1>
-    <div class="content">
+    <div>
       <p>
         I’m a detail-oriented and creative web developer with a background in fullstack development
         and a strong focus on clean, responsive frontend design. After switching careers from
