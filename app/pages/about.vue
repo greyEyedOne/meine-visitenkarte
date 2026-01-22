@@ -15,8 +15,8 @@
         collaborative opportunities.
       </p>
       <p>
-        When I’m not coding, I enjoy cycling, reading books, and learning new things. A couple of
-        months ago, I started learning German and really enjoy this rich and musical language.
+        When I’m not coding, I enjoy cycling, reading books, and learning new things. Lately, I've
+        got German A1 certificate and continue to growth my knoledge.
       </p>
       <p class="mt-1 underline"><NuxtLink to="cv">Meet my CV</NuxtLink></p>
     </div>
