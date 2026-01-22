@@ -2,13 +2,63 @@
   <button class="connect mt-6 text-md uppercase rounded-md w-fit mx-auto">
     <NuxtLink
       to="/contacts"
-      class="px-4 py-2 block box-border cursor-pointer rounded-md bg-black dark:bg-neutral-100 text-white dark:text-black hover:bg-indigo-900 dark:hover:text-indigo-100 opacity-80 dark:opacity-90 hover:opacity-100"
-    >Connect with me</NuxtLink
+      class="px-4 py-2 block box-border cursor-pointer rounded-md bg-black dark:bg-black text-white dark:text-sky-100 opacity-80 dark:opacity-90 hover:opacity-100"
+    >Get in Touch</NuxtLink
     >
   </button>
 </template>
 <style>
-.connect:hover {
+button.connect {
+  margin-bottom: 10vh;
+  z-index: 10;
+  position: relative;
+}
+
+button.connect:hover {
   opacity: 0.95 !important;
+}
+
+.connect::after,
+.connect::before {
+  border-radius: inherit;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  --angle: 0deg;
+  background-image: conic-gradient(from var(--angle), #ffff0050, #00ffff50, #ff00ff50, #ffff0050);
+  animation: borderAnimation 5s linear infinite;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1 !important;
+  padding: 1px;
+  box-sizing: unset;
+  background-image: conic-gradient(from var(--angle), #fff, #fff9, #fff) !important;
+  transition: filter 0.5s ease-in-out;
+}
+
+.connect::after {
+  filter: blur(12px);
+}
+
+.connect:hover:after {
+  filter: blur(4px) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .connect::after,
+  .connect::before {
+    background-image: conic-gradient(
+      from var(--angle),
+      #ffffff40,
+      #ffffff80,
+      #ffffffaf,
+      #fff,
+      #ffffffaf,
+      #ffffff80,
+      #ffffff40
+    ) !important;
+  }
 }
 </style>

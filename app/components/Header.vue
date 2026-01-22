@@ -15,12 +15,14 @@ console.log(route.path)
 </script>
 
 <template>
-  <div class="relative w-full">
-    <Menu />
-    <div v-if="!excludeDisclaimerOn.includes(route.path)" class="mt-4">
-      <Disclaimer />
+  <header class="relative w-full">
+    <div class="container">
+      <Menu />
+      <div v-if="!excludeDisclaimerOn.includes(route.path)" class="mt-4">
+        <Disclaimer />
+      </div>
     </div>
-  </div>
+  </header>
 </template>
 
 <style>

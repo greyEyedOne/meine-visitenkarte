@@ -6,17 +6,16 @@ const isMenuOpen = ref(false)
 const buttonNames = [
   { title: 'Home', link: '/' },
   { title: 'About me', link: '/about' },
-  { title: 'Meet my CV', link: '/cv' },
   { title: 'Portfolio', link: '/portfolio' },
-  { title: "Let's talk", link: '/contacts', class: 'cta dark:text-lime-600 text-green-800' },
-  { title: 'Blog', link: '/blog' },
+  { title: "Let's talk", link: '/contacts', class: 'cta' },
+  // { title: 'Blog', link: '/blog' },
 ]
 </script>
 
 <template>
   <!-- Top panel -->
   <div
-    class="flex relative z-50 bg-transparent justify-between items-center w-full max-w-95/100 mb-6 min-h-17 sm:min-h-20 md:min-h-22"
+    class="top-panel flex relative z-50 bg-transparent justify-between items-center w-full max-w-95/100 md:mb-6"
   >
     <NuxtLink to="/" class="logo-link">
       <div
@@ -34,7 +33,7 @@ const buttonNames = [
     <!-- Burger menu -->
 
     <button
-      class="menu md:hidden cursor-pointer w-10 h-10 flex items-center justify-center rounded-xs dark:text-white text-black"
+      class="menu md:hidden cursor-pointer w-10 h-10 flex items-center justify-center rounded-xs dark:text-slate-300 dark:hover:text-slate-200 text-slate-700 hover:text-slate-600"
       @click="isMenuOpen = !isMenuOpen"
     >
       <span v-if="!isMenuOpen">☰</span>
@@ -42,19 +41,19 @@ const buttonNames = [
     </button>
 
     <!-- Desktop menu -->
-    <div class="hidden md:flex gap-2 w-full max-w-95/100 justify-end">
-      <NuxtLink
-        v-for="(item, i) in buttonNames"
-        :key="i"
-        :to="item.link"
-        :class="[
-          item.class,
-          'menu-item px-4 py-2 rounded-xs text-black uppercase dark:text-white hover:opacity-80',
-        ]"
-        :data-text="item.title"
-      >
-        {{ item.title }}
-      </NuxtLink>
+    <div class="menu hidden md:flex gap-2 w-full max-w-95/100 justify-end">
+      <div v-for="(item, i) in buttonNames" :key="i" classs="menu-item relative">
+        <NuxtLink
+          :to="item.link"
+          :class="[
+            item.class,
+            'menu-item absolute md:text-lg px-4 py-2 rounded-xs uppercase text-slate-700 hover:text-black dark:text-slate-300 dark:hover:text-white',
+          ]"
+          :data-text="item.title"
+        >
+          {{ item.title }}
+        </NuxtLink>
+      </div>
     </div>
   </div>
 
@@ -94,42 +93,47 @@ const buttonNames = [
   border-radius: 6px;
   transform: scaleX(110%);
   position: absolute;
-  margin-left: 2.5rem;
+  margin-left: 1rem;
   width: auto !important;
 }
 
 .menu-item {
-  font-size: 2vw;
   font-weight: 100;
   position: relative;
   text-transform: lowercase;
   text-wrap: nowrap;
-  transition: all 0.25s ease-in-out;
-}
-
-.menu-item:hover {
-  color: var(--color-amber-500);
+  transition: none;
 }
 
 .menu-item::before {
   content: attr(data-text);
   position: absolute;
-  color: lightblue;
+  color: white;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
   transition: top 0.75s cubic-bezier(0.45, 0.05, 0.55, 0.95);
   top: 0.5vw;
   transition: opacity 0.8s ease-in-out;
+  filter: blur(2px);
 }
 
 .menu-item:hover::before {
   letter-spacing: 1px;
   opacity: 0.15;
+  color: white;
   font-weight: bold;
   font-size: 2.5vw;
   z-index: 0;
-  top: -0.5vw;
+  top: -0.15vw;
+}
+
+/* Inline | http://localhost:3000/ */
+
+.menu-item {
+  width: 130px !important;
+  display: block;
+  text-align: center;
 }
 
 .container {
@@ -180,10 +184,10 @@ button.menu {
 .logo img {
   min-width: 30px;
   min-height: 30px;
-  max-width: 132px;
-  max-height: 132px;
+  max-width: 122px;
+  max-height: 122px;
   width: auto;
-  height: 17vw;
+  height: 19vw;
   top: 0;
 }
 

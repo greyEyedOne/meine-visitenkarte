@@ -12,17 +12,17 @@ useHead({
 </script>
 
 <template>
-  <section>
-    <h1>
-      Dara Appel – Your Websmith <br />
-      <span class="font-sans text-lg">Frontend Developer in Hamburg</span>
+  <div class="flex flex-col">
+    <h1 class="uppercase mb-4 dark:text-sky-50">
+      Dara Appel – Your Websmith
+      <span class="w-full block font-sans text-lg">Frontend Developer in Hamburg</span>
     </h1>
 
-    <p>
-      I build modern, accessible and performance-focused web interfaces using Vue 3, Nuxt 4 and
-      Tailwind CSS <br />
+    <p class="dark:text-sky-100">
+      I build modern, accessible and performance-focused web interfaces using React, Vue.js, Nuxt 4
+      and Tailwind CSS <br />
       Bridging the gap between your ideas and a live website, together
     </p>
     <ConnectButton />
-  </section>
+  </div>
 </template>
