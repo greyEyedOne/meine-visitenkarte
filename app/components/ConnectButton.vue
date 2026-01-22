@@ -2,7 +2,7 @@
   <button class="connect mt-6 text-md uppercase rounded-md w-fit mx-auto">
     <NuxtLink
       to="/contacts"
-      class="px-4 py-2 block box-border cursor-pointer rounded-md bg-black dark:bg-black text-white dark:text-sky-100 opacity-80 dark:opacity-90 hover:opacity-100"
+      class="px-4 py-2 block box-border cursor-pointer rounded-md bg-black dark:bg-black text-amber-50! dark:text-sky-100! opacity-80 dark:opacity-90 hover:opacity-100"
     >Get in Touch</NuxtLink
     >
   </button>

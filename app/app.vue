@@ -107,7 +107,7 @@ h1 {
 
 .logo img {
   box-shadow: none !important;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .container {
