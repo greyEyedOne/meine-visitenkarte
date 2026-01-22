@@ -8,11 +8,31 @@ p,
   color: #0f3543 !important;
 }
 
+.cm-btn.cm-btn-success {
+  background: #608c5e !important;
+}
+
+.cn-learn-more {
+  color: #1e2a5b !important;
+}
+
+.cm-link.cn-learn-more:hover {
+  color: #665585 !important;
+}
+
 @media (prefers-color-scheme: dark) {
   h1,
   p,
   .menu-item,
   .content a {
     color: var(--color-sky-100) !important;
+  }
+
+  #klaro-cookie-notice p {
+    color: #542e41 !important;
+  }
+
+  #klaro-cookie-notice {
+    background: #ffffffee;
   }
 }
