@@ -1,2 +1,18 @@
 @import 'tailwindcss';
 @import '@nuxt/ui';
+
+h1,
+p,
+.menu-item,
+.content a {
+  color: #0f3543 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  h1,
+  p,
+  .menu-item,
+  .content a {
+    color: var(--color-sky-100) !important;
+  }
+}
