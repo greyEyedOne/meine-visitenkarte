@@ -5,7 +5,7 @@ useHead({
     {
       name: 'description',
       content:
-        'Dara Appel is a Frontend Developer in Hamburg working with Vue, Nuxt and Tailwind. Freelance and contract projects.',
+        'Marina Appel is a Frontend Developer in Hamburg working with Vue, Nuxt and Tailwind. Freelance and contract projects.',
     },
   ],
 })
@@ -14,7 +14,7 @@ useHead({
 <template>
   <div class="flex flex-col">
     <h1 class="uppercase mb-4 dark:text-sky-50">
-      Dara Appel – Your Websmith
+      Marina Appel – Your Websmith
       <span class="w-full block font-sans text-lg">Frontend Developer in Hamburg</span>
     </h1>
 

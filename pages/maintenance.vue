@@ -8,7 +8,7 @@
         on
         <a href="https://www.linkedin.com/in/marina-appel/">LinkedIn</a>
       </p>
-      <p>Sincerely, Dara, your Websmith</p>
+      <p>Sincerely, Marina, your Websmith</p>
     </div>
   </div>
 </template>

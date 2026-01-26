@@ -4,7 +4,7 @@ const recommendations = [
     name: 'Szymon',
     position: 'Former direct manager',
     quote:
-      'I had the pleasure of working with Dara (Marina) as a Junior Software Developer. She consistently delivered high-quality work with attention to detail. Marina took initiative to improve our workflow, which boosted our development efficiency. She was professional and quick to apply feedback, growing steadily throughout her time with us.',
+      'I had the pleasure of working with Marina as a Junior Software Developer. She consistently delivered high-quality work with attention to detail. Marina took initiative to improve our workflow, which boosted our development efficiency. She was professional and quick to apply feedback, growing steadily throughout her time with us.',
     proofText: 'See on LinkedIn',
     proofLink: 'https://www.linkedin.com/in/marina-appel/details/recommendations/',
   },
