@@ -1,7 +1,7 @@
 <script setup>
 useHead({
   titleTemplate: (title) =>
-    title ? `${title} · Dara Appel` : 'Dara Appel – Frontend Developer in Hamburg',
+    title ? `${title} · Marina Appel` : 'Marina Appel – Frontend Developer in Hamburg',
   meta: [
     {
       name: 'description',

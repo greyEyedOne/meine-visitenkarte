@@ -1,7 +1,6 @@
 <template>
   <div class="text-gray-600 dark:text-white space-y-6">
     <h2 class="text-lg font-semibold">🇩🇪 Impressum (Deutsch)</h2>
-    <p>„Dara Appel“ ist der berufliche Name von <strong>Marina Appel</strong>.</p>
 
     <p>
       <strong>Angaben gemäß § 5 TMG:</strong><br />

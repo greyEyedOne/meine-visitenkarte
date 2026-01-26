@@ -1,7 +1,6 @@
 <template>
   <div class="text-gray-600 dark:text-white space-y-6">
     <h2 class="text-lg font-semibold">🇬🇧 Imprint (English Translation)</h2>
-    <p>“Dara Appel” is the professional name of <strong>Marina Appel</strong>.</p>
 
     <p>
       <strong>Information according to § 5 TMG:</strong><br />
