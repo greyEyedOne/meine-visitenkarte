@@ -31,7 +31,7 @@ const recommendations = [
   <div>
     <h1>My portfolio</h1>
     <h2 class="my-3 text-xl">Recommendations</h2>
-    <div>
+    <div class="recommendations flex flex-col gap-2">
       <div
         v-for="(item, i) in recommendations"
         :key="i"
