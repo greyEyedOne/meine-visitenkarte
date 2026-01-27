@@ -1,8 +1,24 @@
 <script setup>
 const recommendations = [
   {
+    name: 'Roman',
+    position: 'RB Lab DOO CEO',
+    quote:
+      'I recommend Marina Appel, whom I supervised for one year at RBLab, primarily on the Nunami client project. She consistently demonstrated maturity and reliability in frontend and software engineering, thoroughly understanding problems before implementing stable, well-considered solutions. Her work included UI improvements for landing pages, maintaining frontend components, and investigating CTR and redirect issues in affiliate networks. Marina works confidently within existing systems, respects constraints, and takes clear ownership without requiring constant supervision. I confidently recommend Marina for roles valuing reliability, maturity, and professional independence.',
+    proofText: 'See on Malt',
+    proofLink: 'https://en.malt.de/profile/daraappel',
+  },
+  {
+    name: 'Sergey',
+    position: 'Co-Founder & Chief Technology Officer at NUNAMI (formerly Recova)',
+    quote:
+      'I worked with Marina from June 2023 to October 2024. She consistently demonstrated strong attention to detail, respect for deadlines, and the ability to work independently. She also suggested several valuable improvements, especially on the frontend, which helped improve the product and overall customer feedback.',
+    proofText: 'See on LinkedIn',
+    proofLink: 'https://www.linkedin.com/in/marina-appel/details/recommendations/',
+  },
+  {
     name: 'Szymon',
-    position: 'Former direct manager',
+    position: 'Former direct manager at NUNAMI',
     quote:
       'I had the pleasure of working with Marina as a Junior Software Developer. She consistently delivered high-quality work with attention to detail. Marina took initiative to improve our workflow, which boosted our development efficiency. She was professional and quick to apply feedback, growing steadily throughout her time with us.',
     proofText: 'See on LinkedIn',
@@ -15,7 +31,7 @@ const recommendations = [
   <div>
     <h1>My portfolio</h1>
     <h2 class="my-3 text-xl">Recommendations</h2>
-    <div>
+    <div class="recommendations flex flex-col gap-2">
       <div
         v-for="(item, i) in recommendations"
         :key="i"
@@ -24,7 +40,7 @@ const recommendations = [
         <h3
           class="recommendation-name text-sm font-medium leading-snug text-gray-900 dark:text-gray-100"
         >
-          {{ item.name }} <br />Senior Full-Stack Developer, tech company (Germany) <br />
+          {{ item.name }} <br />
           <span
             class="recommendation-position text-xs font-normal text-gray-800 dark:text-gray-200"
           >{{ item.position }}</span
