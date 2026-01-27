@@ -74,28 +74,17 @@ main {
 }
 
 header {
-  background: rgba(11, 150, 192, 4.1);
-  background: rgb(11, 150, 192);
+  background: #7ad2f3;
 }
 
 .content {
-  background: linear-gradient(
-    180deg,
-    rgb(11, 150, 192) 1%,
-    rgba(213, 233, 240, 1) 26%,
-    rgba(249, 247, 239, 1) 45%,
-    rgba(253, 231, 178, 1) 75%,
-    rgba(156, 179, 185, 1) 96%
-  );
+  background: #7ad2f3;
+  background: linear-gradient(180deg, #7ad2f3 5%, #c3e1eb 50%, #fff 95%, #99c2d0);
 }
 
 footer {
-  background: linear-gradient(180deg, rgba(156, 179, 185, 1) 51%, rgba(117, 140, 147, 1) 90%);
+  background: linear-gradient(180deg, #99c2d0 1%, #fde3d4 30%, #b29e9b 90%);
 }
-
-/* main:has(.connect:hover) .content h1,
-main:has(.connect:hover) .content p {
-} */
 
 h1 {
   font-family: 'sansationbold';
@@ -103,6 +92,7 @@ h1 {
   font-size: clamp(2.25rem, 9vw, 3.25rem);
   line-height: 1.15;
   letter-spacing: 2.5px;
+  color: #c4866f;
 }
 
 .logo img {
