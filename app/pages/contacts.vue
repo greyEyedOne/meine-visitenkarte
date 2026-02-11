@@ -3,14 +3,12 @@
     <h1 class="text-2xl">Contacts</h1>
     <div class="flex flex-col text-lg gap-1">
       <p class="e-mail underline">
-        <NuxtLink to="mailto:info@your-websmith.de" class="hover:text-black! dark:hover:text-white!"
+        <NuxtLink to="mailto:info@your-websmith.de" class="hover:text-white!"
         >info@your-websmith.de</NuxtLink
         >
       </p>
       <p class="linkedin underline">
-        <NuxtLink
-          to="https://www.linkedin.com/in/marina-appel/"
-          class="hover:text-black! dark:hover:text-white!"
+        <NuxtLink to="https://www.linkedin.com/in/marina-appel/" class="hover:text-white!"
         >linkedin.com/in/marina-appel</NuxtLink
         >
       </p>

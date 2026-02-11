@@ -1,13 +1,6 @@
 @import 'tailwindcss';
 @import '@nuxt/ui';
 
-h1,
-p,
-.menu-item,
-.content a {
-  color: #0f3543 !important;
-}
-
 .cm-btn.cm-btn-success {
   background: #608c5e !important;
 }
@@ -20,19 +13,22 @@ p,
   color: #665585 !important;
 }
 
+#klaro-cookie-notice p,
+#klaro div,
+#klaro p,
+#klaro h1 {
+  color: #542e41 !important;
+}
+
+#klaro-cookie-notice {
+  background: #ffffffee;
+}
+
 @media (prefers-color-scheme: dark) {
   h1,
   p,
   .menu-item,
   .content a {
     color: var(--color-sky-100) !important;
-  }
-
-  #klaro-cookie-notice p {
-    color: #542e41 !important;
-  }
-
-  #klaro-cookie-notice {
-    background: #ffffffee;
   }
 }

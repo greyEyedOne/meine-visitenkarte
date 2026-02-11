@@ -16,7 +16,7 @@
         Operating as a freelance software developer in Germany. <br />Based in Hamburg, Germany ·
         CET Time Zone (UTC+1)
       </p>
-      <div class="text-gray-400 text-xs font-thin text-center mb-2">Made by Marina Appel, 2026</div>
+      <div class="made-by text-xs font-thin text-center mb-2">Made by Marina Appel, 2026</div>
     </div>
   </footer>
 </template>

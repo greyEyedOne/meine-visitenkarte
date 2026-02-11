@@ -17,7 +17,9 @@ useHead({
 
 <template>
   <link rel="preload" as="image" href="/img/bg-ready-project.png" />
-  <main class="mx-auto min-h-screen w-screen transition-all delay-150 duration-300 ease-in-out">
+  <main
+    class="mx-auto min-h-screen w-screen max-w-full transition-all delay-150 duration-300 ease-in-out"
+  >
     <NuxtLayout />
   </main>
 </template>
@@ -65,6 +67,15 @@ useHead({
   font-style: normal;
 }
 
+/* html {
+  scroll-snap-type: y mandatory;
+}
+
+header,
+section {
+  scroll-snap-align: start;
+} */
+
 body {
   overflow-x: clip;
 }
@@ -73,17 +84,47 @@ main {
   transition: all 0.25s ease-in-out;
 }
 
-header {
-  background: #7ad2f3;
+@layer base {
+  body {
+    background-image:
+      radial-gradient(
+        at 19.986% 24.585851378407796%,
+        hsl(352.8, 87.7%, 68.2%) 0%,
+        hsla(352.8169014084507, 87.65432098765434%, 68.23529411764706%, 0) 100%
+      ),
+      radial-gradient(
+        at 1.9567786171107215% 11.616934065844164%,
+        hsl(13.8, 91.1%, 69.2%) 0%,
+        hsla(13.846153846153845, 91.08280254777071%, 69.2156862745098%, 0) 100%
+      ),
+      radial-gradient(
+        at 70.02698980899875% 17.192069800390964%,
+        hsl(31.4, 95%, 68.4%) 0%,
+        hsla(31.372549019607845, 95.0310559006211%, 68.43137254901961%, 0) 100%
+      ),
+      radial-gradient(
+        at 9.306259907358683% 56.817884560584496%,
+        hsl(52.4, 87.7%, 68.2%) 0%,
+        hsla(52.39436619718308, 87.65432098765434%, 68.23529411764706%, 0) 100%
+      ),
+      radial-gradient(
+        at 97.60926234403912% 12.459315402253834%,
+        hsl(352.8, 87.7%, 68.2%) 0%,
+        hsla(352.8169014084507, 87.65432098765434%, 68.23529411764706%, 0) 100%
+      );
+  }
 }
 
-.content {
-  background: #7ad2f3;
-  background: linear-gradient(180deg, #7ad2f3 5%, #c3e1eb 50%, #fff 95%, #99c2d0);
-}
-
-footer {
-  background: linear-gradient(180deg, #99c2d0 1%, #fde3d4 30%, #b29e9b 90%);
+h1,
+h2,
+h3,
+p,
+.menu-item,
+.content a,
+.content li,
+footer .legals,
+footer .made-by {
+  color: #f8f1f2 !important;
 }
 
 h1 {
@@ -103,6 +144,7 @@ h1 {
 .container {
   padding: 1rem;
   max-width: 1150px;
+  margin-inline: 1rem;
 }
 
 .menu-mobile > div {
@@ -159,7 +201,7 @@ footer .legals a {
 
 footer .legals a:hover,
 footer .legals button:hover {
-  color: black;
+  color: white;
 }
 
 .about {
@@ -235,11 +277,6 @@ h1 span {
 
   footer {
     background: linear-gradient(180deg, #573044 4%, #321622 25%, #0a0710 90%);
-  }
-
-  footer .legals a:hover,
-  footer .legals button:hover {
-    color: white;
   }
 }
 </style>

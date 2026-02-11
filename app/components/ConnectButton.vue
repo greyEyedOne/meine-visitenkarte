@@ -12,10 +12,12 @@ button.connect {
   margin-bottom: 10vh;
   z-index: 10;
   position: relative;
+  transition: scale 0.25s ease-in-out;
 }
 
 button.connect:hover {
   opacity: 0.95 !important;
+  scale: 1.03;
 }
 
 .connect::after,
