@@ -22,11 +22,11 @@ const buttonNames = [
         class="logo logo-mobile p-1 pt-0 h-full w-full border-2 border-solid border-white rounded-md"
       >
         <img
-          src="/logo-dark.png"
-          class="h-8 dark:hidden shadow-grey-400 -top-1 shadow-md scale-x-115%"
+          src="/logo.png"
+          class="h-8 dark:hidden shadow-grey-400 shadow-md mx-1 my-2"
           alt="logo light"
         />
-        <img src="/logo.png" class="h-8 hidden dark:block -top-2 scale-x-115%" alt="logo dark" />
+        <img src="/logo-dark.png" class="h-8 hidden dark:block mx-1 my-2" alt="logo dark" />
       </div>
     </NuxtLink>
 
@@ -91,10 +91,9 @@ const buttonNames = [
 
 .logo img {
   border-radius: 6px;
-  transform: scaleX(110%);
-  position: absolute;
-  margin-left: 1rem;
   width: auto !important;
+  object-fit: contain;
+  object-position: center;
 }
 
 .menu-item {
@@ -152,7 +151,7 @@ button.menu {
 }
 
 .logo img:hover {
-  transform: rotateY(-3deg);
+  transform: scale(1.1);
 }
 
 .logo img {
