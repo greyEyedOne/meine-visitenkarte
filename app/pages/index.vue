@@ -5,7 +5,7 @@ useHead({
     {
       name: 'description',
       content:
-        'Marina Appel is a Frontend Developer in Hamburg working with Vue, Nuxt and Tailwind. Freelance and contract projects.',
+        'Marina Appel is a Frontend Developer in Hamburg working with JavaScript, Vue, Nuxt, React and Tailwind. Freelance and contract projects.',
     },
   ],
 })
@@ -19,7 +19,7 @@ useHead({
       I work with early-stage products that already exist but need care: improving UI, usability,
       and structure so teams can move forward with confidence.
     </p>
-    <p>React · Vue · Nuxt · Tailwind</p>
+    <p>JavaScript · React · Vue · Nuxt · Tailwind</p>
     <ConnectButton />
   </div>
 </template>
