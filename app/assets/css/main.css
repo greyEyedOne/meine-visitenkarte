@@ -20,19 +20,22 @@ p,
   color: #665585 !important;
 }
 
+#klaro-cookie-notice p,
+#klaro div,
+#klaro p,
+#klaro h1 {
+  color: #542e41 !important;
+}
+
+#klaro-cookie-notice {
+  background: #ffffffee;
+}
+
 @media (prefers-color-scheme: dark) {
   h1,
   p,
   .menu-item,
   .content a {
     color: var(--color-sky-100) !important;
-  }
-
-  #klaro-cookie-notice p {
-    color: #542e41 !important;
-  }
-
-  #klaro-cookie-notice {
-    background: #ffffffee;
   }
 }
