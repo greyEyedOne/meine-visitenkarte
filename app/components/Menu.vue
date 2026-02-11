@@ -47,7 +47,7 @@ const buttonNames = [
           :to="item.link"
           :class="[
             item.class,
-            'menu-item absolute md:text-lg px-4 py-2 rounded-xs uppercase hover:text-black! dark:text-slate-300 dark:hover:text-white!',
+            'menu-item absolute md:text-lg px-4 py-2 rounded-xs uppercase dark:text-slate-300 hover:text-white!',
           ]"
           :data-text="item.title"
         >

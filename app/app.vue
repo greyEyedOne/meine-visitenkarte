@@ -119,7 +119,8 @@ h1,
 p,
 .menu-item,
 .content a,
-footer .legals {
+footer .legals,
+footer .made-by {
   color: #f8f1f2 !important;
 }
 
@@ -197,7 +198,7 @@ footer .legals a {
 
 footer .legals a:hover,
 footer .legals button:hover {
-  color: black;
+  color: white;
 }
 
 .about {
@@ -273,11 +274,6 @@ h1 span {
 
   footer {
     background: linear-gradient(180deg, #573044 4%, #321622 25%, #0a0710 90%);
-  }
-
-  footer .legals a:hover,
-  footer .legals button:hover {
-    color: white;
   }
 }
 </style>

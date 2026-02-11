@@ -1,13 +1,6 @@
 @import 'tailwindcss';
 @import '@nuxt/ui';
 
-h1,
-p,
-.menu-item,
-.content a {
-  color: #0f3543 !important;
-}
-
 .cm-btn.cm-btn-success {
   background: #608c5e !important;
 }
