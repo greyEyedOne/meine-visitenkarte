@@ -67,14 +67,14 @@ useHead({
   font-style: normal;
 }
 
-html {
+/* html {
   scroll-snap-type: y mandatory;
 }
 
 header,
 section {
   scroll-snap-align: start;
-}
+} */
 
 body {
   overflow-x: clip;
@@ -116,9 +116,12 @@ main {
 }
 
 h1,
+h2,
+h3,
 p,
 .menu-item,
 .content a,
+.content li,
 footer .legals,
 footer .made-by {
   color: #f8f1f2 !important;
