@@ -11,7 +11,7 @@
           more stable and complete.
         </p>
         <div class="photo max-h-[200px] max-w-[150px]">
-          <img src="/img/pictoart_1769432585886.png" alt="my photo" />
+          <img src="/img/portrait.png" alt="my photo" />
         </div>
       </div>
       <div class="item flex flex-col! gap-1">
