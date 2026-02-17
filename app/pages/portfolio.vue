@@ -1,4 +1,6 @@
 <script setup>
+import Catalogue from '~/components/portfolio/Catalogue.vue'
+
 const recommendations = [
   {
     name: 'Roman',
@@ -29,36 +31,62 @@ const recommendations = [
 
 <template>
   <div>
-    <h1>My portfolio</h1>
-    <h2 class="my-3 text-xl">Recommendations</h2>
-    <div class="recommendations flex flex-col gap-2">
-      <div
-        v-for="(item, i) in recommendations"
-        :key="i"
-        class="recommendation-card opacity-75 dark:opacity-70 rounded-lg p-6 border bg-white text-gray-800 border-gray-200 dark:bg-neutral-900 dark:text-gray-200 dark:border-neutral-700"
-      >
-        <h3
-          class="recommendation-name text-sm font-medium leading-snug text-gray-900! dark:text-gray-100!"
-        >
-          {{ item.name }} <br />
-          <span
-            class="recommendation-position text-xs font-normal text-gray-800! dark:text-gray-200!"
-          >{{ item.position }}</span
-          >
-        </h3>
-        <blockquote
-          class="italic recommendation-quote block mt-4 text-sm leading-relaxed text-gray-800 dark:text-gray-100"
-        >
-          {{ item.quote }}
-        </blockquote>
-        <span class="text-xs">
-          (<a
-            :href="item.proofLink"
-            class="ml-1 not-italic underline underline-offset-2 text-gray-500! hover:text-gray-700! dark:text-gray-400! dark:hover:text-gray-200!"
-          >{{ item.proofText }} </a
-          >)
-        </span>
+    <section class="portfolio">
+      <!-- what problem was solved
+       what exacttly I did
+       why intteractive demo is worth seeing
+
+    “Interactive demo showing how the filtering logic works”
+
+    “Small experiment that illustrates the core idea”
+
+    a case structure
+    [Case preview]
+    [Short description]
+    [Link to interactive demo]
+    -->
+      <h2>My portfolio</h2>
+      <h3 class="my-3 text-xl">Case Studies</h3>
+      <div class="cases flex flex-col gap-2">
+        <div class="case">
+          <div class="case-preview-card">
+            <Catalogue />
+          </div>
+          <p class="case-description"></p>
+        </div>
       </div>
-    </div>
+    </section>
+    <section class="testimonials">
+      <h3 class="my-3 text-xl">Testimonials</h3>
+      <div class="recommendations flex flex-col gap-2">
+        <div
+          v-for="(item, i) in recommendations"
+          :key="i"
+          class="recommendation-card opacity-75 dark:opacity-70 rounded-lg p-6 border bg-white text-gray-800 border-gray-200 dark:bg-neutral-900 dark:text-gray-200 dark:border-neutral-700"
+        >
+          <h3
+            class="recommendation-name text-sm font-medium leading-snug text-gray-900! dark:text-gray-100!"
+          >
+            {{ item.name }} <br />
+            <span
+              class="recommendation-position text-xs font-normal text-gray-800! dark:text-gray-200!"
+            >{{ item.position }}</span
+            >
+          </h3>
+          <blockquote
+            class="italic recommendation-quote block mt-4 text-sm leading-relaxed text-gray-800 dark:text-gray-100"
+          >
+            {{ item.quote }}
+          </blockquote>
+          <span class="text-xs">
+            (<a
+              :href="item.proofLink"
+              class="ml-1 not-italic underline underline-offset-2 text-gray-500! hover:text-gray-700! dark:text-gray-400! dark:hover:text-gray-200!"
+            >{{ item.proofText }} </a
+            >)
+          </span>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
