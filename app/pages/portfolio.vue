@@ -45,8 +45,8 @@ const recommendations = [
     [Short description]
     [Link to interactive demo]
     -->
-      <h2>My portfolio</h2>
-      <h3 class="my-3 text-xl">Case Studies</h3>
+      <h1>My portfolio</h1>
+      <h2 class="my-3 text-xl">Case Studies</h2>
       <div class="cases flex flex-col gap-2">
         <div class="case">
           <div class="case-preview-card">
@@ -57,7 +57,7 @@ const recommendations = [
       </div>
     </section>
     <section class="testimonials">
-      <h3 class="my-3 text-xl">Testimonials</h3>
+      <h2 class="my-3 text-xl">Testimonials</h2>
       <div class="recommendations flex flex-col gap-2">
         <div
           v-for="(item, i) in recommendations"

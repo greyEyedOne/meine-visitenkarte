@@ -1,4 +1,6 @@
 <script setup>
+import ProductGrid from './ProductGrid.vue'
+
 const catalogueItems = [
   {
     id: 1,
@@ -169,45 +171,7 @@ const catalogueItems = [
 </script>
 
 <template>
-  <section class="catalogue bg-[#f9f9f9] dark:bg-[#1a1a1a] p-6 rounded-sm shadow-md">
-    <h2 class="catalogue-title">Our products</h2>
-    <div class="catalogue-container flex flex-wrap justify-between gap-y-8">
-      <div
-        v-for="item in catalogueItems"
-        :key="item.id"
-        class="catalogue-item flex sm:flex-col gap-2 sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
-      >
-        <div class="item-image">
-          <div
-            class="image-container w-[250px] h-[250px] overflow-hidden mx-auto flex items-center justify-center"
-          >
-            <img
-              class="product-image h-full w-full object-cover object-center"
-              :src="item.imageUrl"
-              :alt="item.name"
-            />
-          </div>
-          <div class="photo-credit text-xs text-gray-500 mt-1">
-            Photo by
-            <a :href="item.photoCredit.photographerLink">{{ item.photoCredit.photographer }}</a>
-            on
-            <a :href="item.photoCredit.sourceLink">{{ item.photoCredit.source }}</a>
-          </div>
-        </div>
-        <div class="item-description">
-          <h3 class="product-name">{{ item.name }}</h3>
-          <p class="product-description">
-            {{ item.description }}
-          </p>
-          <div class="product-price flex gap-2">
-            <span class="price-primary">{{ item.pricePrimary }}</span
-            ><span class="price-reduced line-through">{{ item.priceReduced }}</span
-            ><span class="price-recommended line-through">{{ item.priceRecommended }}</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <ProductGrid :items="catalogueItems" />
 </template>
 
 <style scoped></style>
