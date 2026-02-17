@@ -33,7 +33,7 @@ const buttonNames = [
     <!-- Burger menu -->
 
     <button
-      class="menu md:hidden cursor-pointer w-10 h-10 flex items-center justify-center rounded-xs dark:text-slate-300 dark:hover:text-slate-200 text-slate-700 hover:text-slate-600"
+      class="menu md:hidden cursor-pointer w-10 h-10 flex items-center justify-center rounded-xs text-slate-200 dark:text-slate-300 hover:text-slate-100"
       @click="isMenuOpen = !isMenuOpen"
     >
       <span v-if="!isMenuOpen">☰</span>
@@ -47,7 +47,7 @@ const buttonNames = [
           :to="item.link"
           :class="[
             item.class,
-            'menu-item absolute md:text-lg px-4 py-2 rounded-xs uppercase dark:text-slate-300 hover:text-white!',
+            'menu-item absolute md:text-lg px-4 py-2 rounded-xs uppercase font-semibold dark:font-light dark:text-slate-300 hover:text-white!',
           ]"
           :data-text="item.title"
         >
