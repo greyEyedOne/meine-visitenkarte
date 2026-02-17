@@ -97,7 +97,6 @@ const buttonNames = [
 }
 
 .menu-item {
-  font-weight: 100;
   position: relative;
   text-transform: lowercase;
   text-wrap: nowrap;
