@@ -38,11 +38,11 @@ const recommendations = [
         class="recommendation-card opacity-75 dark:opacity-70 rounded-lg p-6 border bg-white text-gray-800 border-gray-200 dark:bg-neutral-900 dark:text-gray-200 dark:border-neutral-700"
       >
         <h3
-          class="recommendation-name text-sm font-medium leading-snug text-gray-900 dark:text-gray-100"
+          class="recommendation-name text-sm font-medium leading-snug text-gray-900! dark:text-gray-100!"
         >
           {{ item.name }} <br />
           <span
-            class="recommendation-position text-xs font-normal text-gray-800 dark:text-gray-200"
+            class="recommendation-position text-xs font-normal text-gray-800! dark:text-gray-200!"
           >{{ item.position }}</span
           >
         </h3>
@@ -54,7 +54,7 @@ const recommendations = [
         <span class="text-xs">
           (<a
             :href="item.proofLink"
-            class="ml-1 not-italic underline underline-offset-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+            class="ml-1 not-italic underline underline-offset-2 text-gray-500! hover:text-gray-700! dark:text-gray-400! dark:hover:text-gray-200!"
           >{{ item.proofText }} </a
           >)
         </span>
