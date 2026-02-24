@@ -9,9 +9,12 @@ defineProps({
 
 <template>
   <div
-    class="catalogue-item h-full shadow-xs hover:shadow-md flex sm:flex-col rounded-xs m-3 p-3 bg-white dark:bg-gray-900 transition-shadow duration-300"
+    class="catalogue-item gap-2 h-full shadow-xs hover:shadow-md flex rounded-md p-3 bg-white dark:bg-transparent dark:shadow-none dark:border dark:border-solid dark:border-pink-900 dark:hover:border-red-300 transition-all duration-300"
   >
     <div class="item-image">
+      <div class="badges absolute top-2 right-2">
+        <div v-for="badge in item.badges" :key="badge" class="badge">{{ badge }}</div>
+      </div>
       <div
         class="image-container overflow-hidden mx-auto flex items-center justify-center rounded-xl"
       >
@@ -32,8 +35,8 @@ defineProps({
         }}</a>
       </div>
     </div>
-    <div class="item-description flex flex-col gap-2 mt-4">
-      <h3 class="product-name text-lg font-bold text-gray-900! dark:text-gray-100!">
+    <div class="item-description flex flex-col gap-2">
+      <h3 class="product-name line-clamp-2 text-lg font-bold text-gray-900! dark:text-gray-100!">
         {{ item.name }}
       </h3>
       <p
@@ -47,7 +50,7 @@ defineProps({
         ><span class="price-recommended line-through">{{ item.priceRecommended }}</span>
       </div>
       <button
-        class="bg-[#f88c6d] text-white p-3 rounded-full flex items-center justify-center shadow-lg transform transition-transform duration-300 hover:scale-105 focus:outline-none"
+        class="bg-[#f88c6d] text-white p-3 rounded-full flex items-center justify-center shadow-lg transform transition-all pointer duration-300 hover:bg-[#da4d25] focus:outline-none"
       >
         Add to cart
       </button>
@@ -75,11 +78,17 @@ defineProps({
   transition: all 0.5s ease-in-out !important;
   border-top-left-radius: 0.75rem;
   border-top-right-radius: 0.75rem;
+  z-index: 15;
+}
+
+.badges {
+  z-index: 10;
 }
 
 .item-image {
   position: relative;
   overflow: hidden;
+  border-radius: 0.75rem;
 }
 
 .item-image:hover .photo-credit {
@@ -89,5 +98,41 @@ defineProps({
 
 .item-description {
   flex: 1 1 0%;
+}
+
+.badge {
+  display: inline-block;
+  margin-inline: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  background: #0a0;
+  line-height: 1.1;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: small;
+  color: white;
+}
+
+.item-image {
+  min-width: 35%;
+  max-width: 50%;
+}
+
+.item-description {
+  margin-top: 0;
+}
+
+@media (min-width: 480px) {
+  .catalogue-item {
+    flex-direction: column;
+  }
+
+  .item-image {
+    min-width: none;
+    max-width: 100%;
+  }
+
+  .item-description {
+    margin-top: 1rem;
+  }
 }
 </style>

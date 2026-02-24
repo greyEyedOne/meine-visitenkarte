@@ -10,16 +10,65 @@ defineProps({
 </script>
 
 <template>
-  <section class="catalogue bg-[#f9f9f9] dark:bg-[#1a1a1a] p-6 rounded-sm shadow-md">
-    <h2 class="catalogue-title text-mint-500!">Our products</h2>
-    <div class="catalogue-container flex flex-wrap justify-between gap-y-8">
-      <div
-        v-for="item in items"
-        :key="item.id"
-        class="catalogue-item-container sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
-      >
-        <ProductCard :item="item" />
-      </div>
+  <div class="catalogue-container grid justify-between">
+    <div v-for="item in items" :key="item.id" class="catalogue-item-container">
+      <ProductCard :item="item" />
     </div>
-  </section>
+  </div>
 </template>
+<style>
+.catalogue {
+  /* --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1440px; */
+  --gap-mobile: 1rem;
+  --gap-desktop: 1.5rem;
+}
+
+.catalogue-container {
+  grid-template-columns: ifr;
+  gap: var(--gap-mobile);
+}
+
+.catalogue-item-container {
+  flex-basis: 100%;
+}
+
+@media (min-width: 480px) {
+  .catalogue-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .catalogue-item-container {
+    flex-basis: calc(50% - var(--gap-mobile));
+  }
+}
+@media (min-width: 768px) {
+  .catalogue-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap-mobile);
+  }
+  .catalogue-item-container {
+    flex-basis: calc(33.3% - var(--gap-mobile));
+  }
+}
+@media (min-width: 1024px) {
+  .catalogue-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .catalogue-item-container {
+    flex-basis: calc(25% - var(--gap-desktop));
+  }
+}
+@media (min-width: 1440px) {
+  .catalogue-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .catalogue-item-container {
+    flex-basis: calc(20% - var(--gap-desktop));
+  }
+}
+</style>

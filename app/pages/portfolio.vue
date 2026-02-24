@@ -48,7 +48,7 @@ const recommendations = [
       <h1>My portfolio</h1>
       <h2 class="my-3 text-xl">Case Studies</h2>
       <div class="cases flex flex-col gap-2">
-        <div class="case">
+        <div class="case pb-6 mb-4">
           <div class="case-preview-card">
             <Catalogue />
           </div>
