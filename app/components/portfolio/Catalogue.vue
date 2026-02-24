@@ -5,10 +5,11 @@ const catalogueItems = [
   {
     id: 1,
     name: 'a Creme',
-    description: 'It makes your skin soft and smooth and young. Just try it!',
+    description: 'Makes your skin soft and smooth and young. Just try it!',
     pricePrimary: '€12.99',
     priceReduced: '€11.99',
     priceRecommended: '',
+    badges: '',
     imageUrl: '/img/catalogue/nataliya-melnychuk-PdzMmdHqN2c-unsplash(1).jpg',
     photoCredit: {
       photographer: 'Nataliya Melnychuk',
@@ -28,6 +29,7 @@ const catalogueItems = [
     pricePrimary: '€89.00',
     priceReduced: '',
     priceRecommended: '€99.00',
+    badges: ['Bestseller'],
     imageUrl: '/img/catalogue/c-d-x-PDX_a_82obo-unsplash.jpg',
     photoCredit: {
       photographer: 'C D-X',
@@ -47,6 +49,7 @@ const catalogueItems = [
     pricePrimary: '€64.50',
     priceReduced: '€59.90',
     priceRecommended: '',
+    badges: ['Sale', 'Limited'],
     imageUrl: '/img/catalogue/karly-jones-4i9ef6xU738-unsplash.jpg',
     photoCredit: {
       photographer: 'Karly Jones',
@@ -65,6 +68,7 @@ const catalogueItems = [
     pricePrimary: '€14.90',
     priceReduced: '',
     priceRecommended: '€16.50',
+    badges: ['New'],
     imageUrl: '/img/catalogue/battlecreek-coffee-roasters-rsnzc-8dVs0-unsplash.jpg',
     photoCredit: {
       photographer: 'Battlecreek Coffee Roasters',
@@ -83,6 +87,7 @@ const catalogueItems = [
     pricePrimary: '€129.00',
     priceReduced: '',
     priceRecommended: '',
+    badges: ['Premium'],
     imageUrl: '/img/catalogue/ruslan-bardash-4kTbAMRAHtQ-unsplash.jpg',
     photoCredit: {
       photographer: 'Ruslan Bardash',
@@ -101,6 +106,7 @@ const catalogueItems = [
     pricePrimary: '€149.00',
     priceReduced: '€139.00',
     priceRecommended: '',
+    badges: ['Sale', 'Pro'],
     imageUrl: '/img/catalogue/kiran-ck-LSNJ-pltdu8-unsplash.jpg',
     photoCredit: {
       photographer: 'Kiran CK',
@@ -120,6 +126,7 @@ const catalogueItems = [
     pricePrimary: '€18.50',
     priceReduced: '',
     priceRecommended: '',
+    badges: ['Eco'],
     imageUrl: '/img/catalogue/mitzie-organics-dnstpPqCBbw-unsplash.jpg',
     photoCredit: {
       photographer: 'Mitzie Organics',
@@ -138,6 +145,7 @@ const catalogueItems = [
     pricePrimary: '€179.00',
     priceReduced: '',
     priceRecommended: '€199.00',
+    badges: ['New'],
     imageUrl: '/img/catalogue/jakob-owens-O_bhy3TnSYU-unsplash(1).jpg',
     photoCredit: {
       photographer: 'Jakob Owens',
@@ -157,6 +165,7 @@ const catalogueItems = [
     pricePrimary: '€74.00',
     priceReduced: '€69.00',
     priceRecommended: '',
+    badges: ['Sale'],
     imageUrl: '/img/catalogue/mohammad-metri-E-0ON3VGrBc-unsplash.jpg',
     photoCredit: {
       photographer: 'Mohammad Metri',
@@ -171,7 +180,14 @@ const catalogueItems = [
 </script>
 
 <template>
-  <ProductGrid :items="catalogueItems" />
+  <section class="catalogue bg-[#f5f5f5] dark:bg-[#1a1a1a] p-6 rounded-sm shadow-md">
+    <h2
+      class="catalogue-title text-rose-900! dark:text-rose-300! text-center text-3xl uppercase font-bold my-2"
+    >
+      Product Catalogue
+    </h2>
+    <ProductGrid :items="catalogueItems" />
+  </section>
 </template>
 
 <style scoped></style>
