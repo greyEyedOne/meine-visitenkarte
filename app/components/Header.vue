@@ -2,15 +2,7 @@
 import { useRoute } from 'vue-router'
 const route = useRoute()
 
-const excludeDisclaimerOn = [
-  '/',
-  '/contacts',
-  '/about',
-  '/en/privacy-policy',
-  '/datenschutzerklaerung',
-  '/en/imprint',
-  '/impressum',
-]
+const includeDisclaimer = ['/portfolio-cases/responsive-product-catalogue']
 console.log(route.path)
 </script>
 
@@ -18,7 +10,7 @@ console.log(route.path)
   <header class="relative w-full">
     <div class="container">
       <Menu />
-      <div v-if="!excludeDisclaimerOn.includes(route.path)" class="mt-4">
+      <div v-if="includeDisclaimer.includes(route.path)" class="mt-4">
         <Disclaimer />
       </div>
     </div>
