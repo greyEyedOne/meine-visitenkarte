@@ -4,8 +4,9 @@ import ProductGrid from './ProductGrid.vue'
 const catalogueItems = [
   {
     id: 1,
-    name: 'a Creme',
-    description: 'Makes your skin soft and smooth and young. Just try it!',
+    name: 'Hydrating Creme',
+    description:
+      'Hydrating daily face cream with lightweight texture and a silky finish. Absorbs quickly without leaving a greasy layer, helps maintain skin elasticity, and gives a fresh, well-rested look throughout the day. Suitable for normal to combination skin and works well under makeup.',
     pricePrimary: '€12.99',
     priceReduced: '€11.99',
     priceRecommended: '',
@@ -182,7 +183,7 @@ const catalogueItems = [
 <template>
   <section class="catalogue bg-[#f5f5f5] dark:bg-[#1a1a1a] p-6 rounded-sm shadow-md">
     <h2
-      class="catalogue-title text-rose-900! dark:text-rose-300! text-center text-3xl uppercase font-bold my-2"
+      class="catalogue-title text-rose-900! dark:text-rose-300! text-center text-3xl uppercase font-bold mt-4 mb-6"
     >
       Product Catalogue
     </h2>
