@@ -1,5 +1,19 @@
 <script setup>
-import Catalogue from '~/components/portfolio/Catalogue.vue'
+const cases = [
+  {
+    title: 'Responsive Product Catalogue',
+    description:
+      'A responsive product catalogue built with Vue 3 and Tailwind CSS, showcasing a grid of product cards that adapt to different screen sizes.',
+    demoLink: '/portfolio-cases/responsive-product-catalogue',
+    demoImg: '/img/portfolio-cases/responsive-product-catalogue-light-desctop.png',
+    tech: ['Nuxt 4', 'Vue 3', 'TailwindCSS'],
+    context: '',
+    goal: '',
+    'key-decisions': '',
+    'implementation-highlights': '',
+    ouutcome: '',
+  },
+]
 
 const recommendations = [
   {
@@ -46,18 +60,46 @@ const recommendations = [
     [Link to interactive demo]
     -->
       <h1>My portfolio</h1>
-      <h2 class="my-3 text-xl">Case Studies</h2>
-      <div class="cases flex flex-col gap-2">
-        <div class="case pb-6 mb-4">
-          <div class="case-preview-card">
-            <Catalogue />
+      <h2
+        class="my-3 text-2xl uppercase mt-4 mb-4 after:block after:h-[1px] after:w-full after:bg-gray-300 dark:after:bg-gray-700"
+      >
+        Case Studies
+      </h2>
+      <div v-for="item in cases" :key="item.title" class="cases flex flex-col gap-2">
+        <div class="case">
+          <h3 class="block sm:hidden text-xl mb-3 text-center">{{ item.title }}</h3>
+          <div class="case-preview-card pb-6 mb-4 flex flex-col sm:flex-row gap-4">
+            <NuxtLink class="case-link cursor-pointer" :to="item.demoLink"
+            ><div
+              class="image-container max-w-[400px] m-auto sm:max-w-none sm:w-[300px] md:w-[400px] lg:w-[500px] rounded-sm overflow-hidden"
+            >
+              <img
+                :src="item.demoImg"
+                :alt="item.title"
+                class="portfolio-case-img mask-b-from-54% mask-b-to-100%"
+              /></div
+            ></NuxtLink>
+            <div class="case-description sm:self-center">
+              <h3 class="hidden sm:block text-xl mb-3 text-center">{{ item.title }}</h3>
+              <p>
+                {{ item.description
+                }}<NuxtLink
+                  class="case-link underline block w-full mt-2 mb-2 cursor-pointer"
+                  :to="item.demoLink"
+                >See more</NuxtLink
+                >
+              </p>
+            </div>
           </div>
-          <p class="case-description"></p>
         </div>
       </div>
     </section>
     <section class="testimonials">
-      <h2 class="my-3 text-xl">Testimonials</h2>
+      <h2
+        class="my-3 text-2xl uppercase mt-4 mb-4 after:block after:h-[1px] after:w-full after:bg-gray-300 dark:after:bg-gray-700"
+      >
+        Testimonials
+      </h2>
       <div class="recommendations flex flex-col gap-2">
         <div
           v-for="(item, i) in recommendations"

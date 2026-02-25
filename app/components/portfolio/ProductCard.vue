@@ -9,22 +9,30 @@ defineProps({
 
 <template>
   <div
-    class="catalogue-item gap-2 h-full shadow-xs hover:shadow-md flex rounded-md p-3 bg-white dark:bg-transparent dark:shadow-none dark:border dark:border-solid dark:border-pink-900 dark:hover:border-red-300 transition-all duration-300"
+    class="catalogue-item gap-2 h-full shadow-xs hover:shadow-md flex flex-col rounded-md p-3 bg-white dark:bg-transparent dark:shadow-none dark:border dark:border-solid dark:border-pink-900 dark:hover:border-red-300 transition-all duration-300"
   >
-    <div class="item-image">
-      <div class="badges absolute top-2 right-2">
-        <div v-for="badge in item.badges" :key="badge" class="badge">{{ badge }}</div>
+    <div class="item-image mt-auto mb-auto relative overflow-hidden rounded-xl">
+      <div class="badges absolute top-1 right-1 z-10">
+        <div
+          v-for="badge in item.badges"
+          :key="badge"
+          class="badge text-sm inline-block mx-1 py-1 px-2 bg-[#0a0] leading-[1.1] rounded-[5px] uppercase text-white"
+        >
+          {{ badge }}
+        </div>
       </div>
       <div
         class="image-container overflow-hidden mx-auto flex items-center justify-center rounded-xl"
       >
         <img
-          class="product-image h-full w-full object-cover object-center"
+          class="product-image h-full w-full object-cover object-center transition-all duration-500 ease-in-out aspect-[4/5] text-transparent"
           :src="item.imageUrl"
           :alt="item.name"
         />
       </div>
-      <div class="photo-credit text-xs text-gray-500">
+      <div
+        class="photo-credit text-xs text-gray-500 absolute -top-8 bg-white block w-full py-1 px-2 opacity-0 transition-all duration-500 ease-in-out !important rounded-t-xl z-15"
+      >
         Photo by
         <a class="text-gray-900! dark:text-gray-400!" :href="item.photoCredit.photographerLink">{{
           item.photoCredit.photographer
@@ -35,7 +43,7 @@ defineProps({
         }}</a>
       </div>
     </div>
-    <div class="item-description flex flex-col gap-2">
+    <div class="item-description flex flex-1 flex-col gap-2">
       <h3 class="product-name line-clamp-2 text-lg font-bold text-gray-900! dark:text-gray-100!">
         {{ item.name }}
       </h3>
@@ -62,77 +70,8 @@ defineProps({
   scale: 1.03;
 }
 
-.product-image {
-  transition: all 0.5s ease-in-out;
-  aspect-ratio: calc(4 / 5);
-}
-
-.photo-credit {
-  position: absolute;
-  top: -2rem;
-  background: #fff;
-  display: block;
-  width: 100%;
-  padding: 0.25rem 0.5rem;
-  opacity: 0;
-  transition: all 0.5s ease-in-out !important;
-  border-top-left-radius: 0.75rem;
-  border-top-right-radius: 0.75rem;
-  z-index: 15;
-}
-
-.badges {
-  z-index: 10;
-}
-
-.item-image {
-  position: relative;
-  overflow: hidden;
-  border-radius: 0.75rem;
-}
-
 .item-image:hover .photo-credit {
   opacity: 0.9;
   top: 0;
-}
-
-.item-description {
-  flex: 1 1 0%;
-}
-
-.badge {
-  display: inline-block;
-  margin-inline: 0.25rem;
-  padding: 0.25rem 0.5rem;
-  background: #0a0;
-  line-height: 1.1;
-  border-radius: 5px;
-  text-transform: uppercase;
-  font-size: small;
-  color: white;
-}
-
-.item-image {
-  min-width: 35%;
-  max-width: 50%;
-}
-
-.item-description {
-  margin-top: 0;
-}
-
-@media (min-width: 480px) {
-  .catalogue-item {
-    flex-direction: column;
-  }
-
-  .item-image {
-    min-width: none;
-    max-width: 100%;
-  }
-
-  .item-description {
-    margin-top: 1rem;
-  }
 }
 </style>
