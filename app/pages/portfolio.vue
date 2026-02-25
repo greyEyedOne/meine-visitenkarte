@@ -1,4 +1,20 @@
 <script setup>
+const cases = [
+  {
+    title: 'Responsive Product Catalogue',
+    description:
+      'A responsive product catalogue built with Vue 3 and Tailwind CSS, showcasing a grid of product cards that adapt to different screen sizes.',
+    demoLink: '/portfolio-cases/responsive-product-catalogue',
+    demoImg: '/img/portfolio-cases/responsive-product-catalogue-light-desctop.png',
+    tech: ['Nuxt 4', 'Vue 3', 'TailwindCSS'],
+    context: '',
+    goal: '',
+    'key-decisions': '',
+    'implementation-highlights': '',
+    ouutcome: '',
+  },
+]
+
 const recommendations = [
   {
     name: 'Roman',
@@ -29,36 +45,90 @@ const recommendations = [
 
 <template>
   <div>
-    <h1>My portfolio</h1>
-    <h2 class="my-3 text-xl">Recommendations</h2>
-    <div class="recommendations flex flex-col gap-2">
-      <div
-        v-for="(item, i) in recommendations"
-        :key="i"
-        class="recommendation-card opacity-75 dark:opacity-70 rounded-lg p-6 border bg-white text-gray-800 border-gray-200 dark:bg-neutral-900 dark:text-gray-200 dark:border-neutral-700"
+    <section class="portfolio">
+      <!-- what problem was solved
+       what exacttly I did
+       why intteractive demo is worth seeing
+
+    “Interactive demo showing how the filtering logic works”
+
+    “Small experiment that illustrates the core idea”
+
+    a case structure
+    [Case preview]
+    [Short description]
+    [Link to interactive demo]
+    -->
+      <h1>My portfolio</h1>
+      <h2
+        class="my-3 text-2xl uppercase mt-4 mb-4 after:block after:h-[1px] after:w-full after:bg-gray-300 dark:after:bg-gray-700"
       >
-        <h3
-          class="recommendation-name text-sm font-medium leading-snug text-gray-900! dark:text-gray-100!"
-        >
-          {{ item.name }} <br />
-          <span
-            class="recommendation-position text-xs font-normal text-gray-800! dark:text-gray-200!"
-          >{{ item.position }}</span
-          >
-        </h3>
-        <blockquote
-          class="italic recommendation-quote block mt-4 text-sm leading-relaxed text-gray-800 dark:text-gray-100"
-        >
-          {{ item.quote }}
-        </blockquote>
-        <span class="text-xs">
-          (<a
-            :href="item.proofLink"
-            class="ml-1 not-italic underline underline-offset-2 text-gray-500! hover:text-gray-700! dark:text-gray-400! dark:hover:text-gray-200!"
-          >{{ item.proofText }} </a
-          >)
-        </span>
+        Case Studies
+      </h2>
+      <div v-for="item in cases" :key="item.title" class="cases flex flex-col gap-2">
+        <div class="case">
+          <h3 class="block sm:hidden text-xl mb-3 text-center">{{ item.title }}</h3>
+          <div class="case-preview-card pb-6 mb-4 flex flex-col sm:flex-row gap-4">
+            <NuxtLink class="case-link cursor-pointer" :to="item.demoLink"
+            ><div
+              class="image-container max-w-[400px] m-auto sm:max-w-none sm:w-[300px] md:w-[400px] lg:w-[500px] rounded-sm overflow-hidden"
+            >
+              <img
+                :src="item.demoImg"
+                :alt="item.title"
+                class="portfolio-case-img mask-b-from-54% mask-b-to-100%"
+              /></div
+            ></NuxtLink>
+            <div class="case-description sm:self-center">
+              <h3 class="hidden sm:block text-xl mb-3 text-center">{{ item.title }}</h3>
+              <p>
+                {{ item.description
+                }}<NuxtLink
+                  class="case-link underline block w-full mt-2 mb-2 cursor-pointer"
+                  :to="item.demoLink"
+                >See more</NuxtLink
+                >
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
+    <section class="testimonials">
+      <h2
+        class="my-3 text-2xl uppercase mt-4 mb-4 after:block after:h-[1px] after:w-full after:bg-gray-300 dark:after:bg-gray-700"
+      >
+        Testimonials
+      </h2>
+      <div class="recommendations flex flex-col gap-2">
+        <div
+          v-for="(item, i) in recommendations"
+          :key="i"
+          class="recommendation-card opacity-75 dark:opacity-70 rounded-lg p-6 border bg-white text-gray-800 border-gray-200 dark:bg-neutral-900 dark:text-gray-200 dark:border-neutral-700"
+        >
+          <h3
+            class="recommendation-name text-sm font-medium leading-snug text-gray-900! dark:text-gray-100!"
+          >
+            {{ item.name }} <br />
+            <span
+              class="recommendation-position text-xs font-normal text-gray-800! dark:text-gray-200!"
+            >{{ item.position }}</span
+            >
+          </h3>
+          <blockquote
+            class="italic recommendation-quote block mt-4 text-sm leading-relaxed text-gray-800 dark:text-gray-100"
+          >
+            {{ item.quote }}
+          </blockquote>
+          <span class="text-xs">
+            (<a
+              :href="item.proofLink"
+              class="ml-1 not-italic underline underline-offset-2 text-gray-500! hover:text-gray-700! dark:text-gray-400! dark:hover:text-gray-200!"
+            >{{ item.proofText }} </a
+            >)
+          </span>
+        </div>
+      </div>
+    </section>
   </div>
 </template>

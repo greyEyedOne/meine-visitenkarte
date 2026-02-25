@@ -16,7 +16,6 @@ useHead({
 </script>
 
 <template>
-  <link rel="preload" as="image" href="/img/bg-ready-project.png" />
   <main
     class="mx-auto min-h-screen w-screen max-w-full transition-all delay-150 duration-300 ease-in-out"
   >
@@ -84,6 +83,11 @@ main {
   transition: all 0.25s ease-in-out;
 }
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @layer base {
   body {
     background-image:
@@ -139,12 +143,6 @@ h1 {
 .logo img {
   box-shadow: none !important;
   opacity: 0.9;
-}
-
-.container {
-  padding: 1rem;
-  max-width: 1150px;
-  margin-inline: 1rem;
 }
 
 .menu-mobile > div {
@@ -211,14 +209,6 @@ footer .legals button:hover {
 footer button {
   cursor: pointer;
   font-size: small;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 1rem;
-  margin-inline: auto;
 }
 
 .content > .container {

@@ -15,7 +15,7 @@ const buttonNames = [
 <template>
   <!-- Top panel -->
   <div
-    class="top-panel flex relative z-50 bg-transparent justify-between items-center w-full max-w-95/100 md:mb-6"
+    class="top-panel flex relative z-50 bg-transparent justify-between items-center w-full max-w-95/100 md:mb-6 mx-auto"
   >
     <NuxtLink to="/" class="logo-link">
       <div
