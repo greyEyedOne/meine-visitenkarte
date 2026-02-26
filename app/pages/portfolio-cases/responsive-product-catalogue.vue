@@ -7,20 +7,36 @@ import Catalogue from '~/components/portfolio/Catalogue.vue'
     <NuxtLink to="/portfolio" class="navigation mr-auto before:content-['<<'] before:mr-1">
       Back to portfolio</NuxtLink
     >
-    <section class="max-w-5xl mx-auto px-4 py-16">
+    <section id="case-details" class="max-w-5xl mx-auto px-4 py-16">
       <div class="space-y-10">
         <!-- Header -->
         <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Responsive Product Grid</h2>
         <p class="text-sm text-gray-500 dark:text-gray-400">Nuxt 4 · Vue 3 · TailwindCSS</p>
 
         <!-- Context -->
-        <div class="space-y-3">
-          <h3 class="text-xl font-semibold">Context</h3>
-          <p class="leading-relaxed text-base text-justify!">
+        <div
+          class="space-y-3 grid [grid-template-areas:'title''description''demo'] sm:[grid-template-areas:'title_title''description_demo'] gap-x-6"
+        >
+          <h3 class="text-xl font-semibold [grid-area:title]">Context</h3>
+          <p class="leading-relaxed text-base text-justify! [grid-area:description] self-center">
             This project demonstrates responsive layout engineering and theme system implementation
             within a realistic UI component. The goal was to build a stable product grid with
             light/dark mode support and predictable behaviour across all screen sizes.
+            <NuxtLink
+              class="block w-full mt-2 mb-2 curssor-pointer text-gray-200! hover:text-white!"
+              to="#case-preview-card"
+            >See below</NuxtLink
+            >
           </p>
+          <div
+            class="overflow-hidden [grid-area:demo] rounded-md border border-gray-200 dark:border-gray-400 p-1 mb-auto max-w-[300px]"
+          >
+            <img
+              class="rounded-md w-full h-auto object-fill object-center"
+              src="/img/portfolio-cases/responsive-product-grid-demo.gif"
+              alt="responsive product grid demonstration"
+            />
+          </div>
         </div>
 
         <!-- Goal -->
@@ -106,7 +122,7 @@ import Catalogue from '~/components/portfolio/Catalogue.vue'
         </div>
       </div>
     </section>
-    <div class="case-preview-card">
+    <div id="case-preview-card">
       <Catalogue />
     </div>
   </div>

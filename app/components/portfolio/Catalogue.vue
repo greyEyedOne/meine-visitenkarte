@@ -182,6 +182,11 @@ const catalogueItems = [
 
 <template>
   <section class="catalogue bg-[#f5f5f5] dark:bg-[#1a1a1a] p-6 rounded-sm shadow-md">
+    <NuxtLink
+      class="mt-2 mb-2 cursor-pointer text-gray-400! dark:hover:text-white! hover:text-gray-900!"
+      to="#case-details"
+    >back to the case details</NuxtLink
+    >
     <h2
       class="catalogue-title text-rose-900! dark:text-rose-300! text-center text-3xl uppercase font-bold mt-4 mb-6"
     >
