@@ -28,6 +28,7 @@ defineProps({
           class="product-image h-full w-full object-cover object-center transition-all duration-500 ease-in-out aspect-[4/5] text-transparent"
           :src="item.imageUrl"
           :alt="item.name"
+          loading="lazy"
         />
       </div>
       <div
