@@ -122,6 +122,7 @@ main {
 h1,
 h2,
 h3,
+h4,
 p,
 .menu-item,
 .content a,
