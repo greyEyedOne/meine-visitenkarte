@@ -41,9 +41,12 @@ export default defineNuxtConfig({
   },
 
   robots: {
-    rules: {
-      UserAgent: '*',
-      Allow: '/',
-    },
+    rules: [
+      {
+        UserAgent: '*',
+        Disallow: process.env.VERCEL_ENV === 'production' ? undefined : '/',
+      },
+    ],
+    sitemap: 'https://www.your-websmith.de/sitemap.xml',
   },
 })
