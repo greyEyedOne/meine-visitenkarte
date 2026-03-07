@@ -1,4 +1,5 @@
 import svgLoader from 'vite-svg-loader'
+const siteEnv = process.env.NUXT_PUBLIC_SITE_ENV
 
 export default defineNuxtConfig({
   app: {
@@ -44,7 +45,7 @@ export default defineNuxtConfig({
     rules: [
       {
         UserAgent: '*',
-        Disallow: process.env.VERCEL_ENV === 'production' ? undefined : '/',
+        Disallow: siteEnv === 'production' ? undefined : '/',
       },
     ],
     sitemap: 'https://www.your-websmith.de/sitemap.xml',
