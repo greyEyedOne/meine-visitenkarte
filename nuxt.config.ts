@@ -22,7 +22,13 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
-  modules: ['@nuxt/eslint', '@nuxt/image', '@nuxt/test-utils', '@nuxt/ui'],
+  site: {
+    url: 'https://www.your-websmith.de',
+  },
+  sitemap: {
+    autoLastmod: true,
+  },
+  modules: ['@nuxt/eslint', '@nuxt/image', '@nuxt/test-utils', '@nuxt/ui', '@nuxtjs/sitemap'],
   vite: {
     plugins: [svgLoader()],
   },
