@@ -28,8 +28,22 @@ export default defineNuxtConfig({
   sitemap: {
     autoLastmod: true,
   },
-  modules: ['@nuxt/eslint', '@nuxt/image', '@nuxt/test-utils', '@nuxt/ui', '@nuxtjs/sitemap'],
+  modules: [
+    '@nuxt/eslint',
+    '@nuxt/image',
+    '@nuxt/test-utils',
+    '@nuxt/ui',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots',
+  ],
   vite: {
     plugins: [svgLoader()],
+  },
+
+  robots: {
+    rules: {
+      UserAgent: '*',
+      Allow: '/',
+    },
   },
 })
