@@ -14,8 +14,10 @@
       </div>
       <p class="about text-center my-2 font-thin">
         Operating as a freelance software developer in Germany. <br />Based in Hamburg, Germany ·
-        CET Time Zone (UTC+1)
+        CET Time Zone (UTC+1) <br />Available for freelance frontend support and project-based
+        collaboration
       </p>
+
       <div class="made-by text-xs font-thin text-center mb-2">Made by Marina Appel, 2026</div>
     </div>
   </footer>

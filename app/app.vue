@@ -6,7 +6,7 @@ useHead({
     {
       name: 'description',
       content:
-        'Frontend Developer based in Hamburg. React, Vue 3, Nuxt 4, Tailwind CSS, modern JavaScript. Available for freelance and contract work.',
+        'Frontend Developer based in Hamburg. React, Vue 3, Nuxt 4, Tailwind CSS, modern JavaScript. Available for freelance and project-based frontend support.',
     },
   ],
   htmlAttrs: {
@@ -234,9 +234,14 @@ h1 span {
   font-size: clamp(1.25rem, 4.5vw, 1.75rem);
 }
 
+h1,
+h2 {
+  text-transform: uppercase;
+}
+
 .content p {
   font-size: clamp(1.25rem, 1.7vw, 1.75rem);
-  font-weight: 100;
+  font-weight: 200;
 }
 
 @media (orientation: landscape) {
@@ -253,6 +258,10 @@ h1 span {
 @media (prefers-color-scheme: dark) {
   header {
     background: linear-gradient(180deg, #172250 5%, #1f2b5d 86%);
+  }
+
+  .content p {
+    font-weight: 100;
   }
 
   .content {
