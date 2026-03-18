@@ -6,7 +6,7 @@ useHead({
     {
       name: 'description',
       content:
-        'Frontend Developer based in Hamburg. React, Vue 3, Nuxt 4, Tailwind CSS, modern JavaScript. Available for freelance and contract work.',
+        'Frontend Developer based in Hamburg. React, Vue 3, Nuxt 4, Tailwind CSS, modern JavaScript. Available for freelance and project-based frontend support.',
     },
   ],
   htmlAttrs: {
