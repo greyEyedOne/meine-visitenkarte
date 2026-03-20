@@ -10,6 +10,7 @@
           structure, improved usability, or small but meaningful fixes that make the product feel
           more stable and complete.
         </p>
+
         <div class="photo max-h-[200px] max-w-[150px]">
           <img src="/img/portrait.png" alt="my photo" />
         </div>
@@ -19,17 +20,20 @@
           I’ve worked on landing pages, internal tools, and affiliate platforms, often collaborating
           closely with designers, product owners, and developers.
         </p>
+
         <p>
           I value clear communication, defined scopes, and respectful collaboration. I usually work
           in focused task blocks and prefer projects where thoughtful work matters more than speed
           for speed’s sake.
         </p>
-        <p>Based in Hamburg. Open to short-term freelance or collaborative work.</p>
         <span class="mt-1 underline block w-full text-center"
-        ><a href="/documents/Marina_Appel_CV_Freelance.pdf" target="_blank"
-        >Meet my CV (PDF)</a
+        ><NuxtLink
+          to="/documents/2026-03-Marina Appel-Software-Engineer-CV2026-03-Marina-Appel-Software-Engineer-CV.pdf"
+          target="_blank"
+        >Meet my CV (PDF)</NuxtLink
         ></span
         >
+        <p>Based in Hamburg. Open to short-term freelance or collaborative work.</p>
       </div>
     </div>
   </section>

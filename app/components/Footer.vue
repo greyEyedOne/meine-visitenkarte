@@ -8,7 +8,15 @@
         <NuxtLink to="/contacts" class="cta relative italic font-bold"
         >Let's discuss your task</NuxtLink
         >
-        | <NuxtLink to="/en/privacy-policy">Privacy Policy</NuxtLink> |
+        |
+
+        <NuxtLink
+          to="/documents/2026-03-Marina Appel-Software-Engineer-CV2026-03-Marina-Appel-Software-Engineer-CV.pdf"
+          target="_blank"
+        >Resume (PDF)</NuxtLink
+        >
+        |
+        <NuxtLink to="/en/privacy-policy">Privacy Policy</NuxtLink> |
         <NuxtLink to="/en/imprint">Imprint</NuxtLink> |
         <button onclick="klaro.show()">Cookie settings</button>
       </div>
