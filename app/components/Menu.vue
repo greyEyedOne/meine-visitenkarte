@@ -7,7 +7,12 @@ const buttonNames = [
   { title: 'Home', link: '/' },
   { title: 'About me', link: '/about' },
   { title: 'Portfolio', link: '/portfolio' },
-  { title: "Let's talk", link: '/contacts', class: 'cta' },
+  {
+    title: "Let's talk",
+    link: '/contacts',
+    class:
+      'cta border-white! hover:text-[#1c2758]! hover:bg-white transition-all! duration-150! ease-in-out!',
+  },
   // { title: 'Blog', link: '/blog' },
 ]
 </script>
@@ -47,7 +52,7 @@ const buttonNames = [
           :to="item.link"
           :class="[
             item.class,
-            'menu-item absolute md:text-lg px-4 py-2 rounded-xs uppercase font-semibold dark:font-light dark:text-slate-300 hover:text-white!',
+            'menu-item absolute md:text-lg mx-2 my-1 px-2 py-1 border border-[.5px] border-transparent rounded-md uppercase font-semibold dark:font-light dark:text-slate-300 hover:text-white',
           ]"
           :data-text="item.title"
         >
@@ -193,6 +198,5 @@ button.menu {
   font-weight: 400;
   letter-spacing: 0.85px;
   font-style: normal;
-  animation: glitchMove 2s infinite ease-in-out alternate;
 }
 </style>

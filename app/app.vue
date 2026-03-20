@@ -160,26 +160,6 @@ h1 {
   z-index: 1000;
 }
 
-@keyframes glitchMove {
-  0%,
-  100% {
-    transform: translate(0, 0);
-    opacity: 0.5;
-  }
-  25% {
-    transform: translate(0.5px, -0.5px);
-    opacity: 0.7;
-  }
-  50% {
-    transform: translate(-0.5px, 0.5px);
-    opacity: 0.8;
-  }
-  75% {
-    transform: translate(1px, -0.5px);
-    opacity: 0.6;
-  }
-}
-
 @keyframes borderAnimation {
   to {
     --angle: 360deg;
