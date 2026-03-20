@@ -10,7 +10,9 @@
         >
         |
 
-        <NuxtLink to="/documents/2026-03-Marina Appel-Software-Engineer-CV.pdf" target="_blank"
+        <NuxtLink
+          to="/documents/2026-03-Marina Appel-Software-Engineer-CV2026-03-Marina-Appel-Software-Engineer-CV.pdf"
+          target="_blank"
         >Resume (PDF)</NuxtLink
         >
         |

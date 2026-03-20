@@ -27,8 +27,10 @@
           for speed’s sake.
         </p>
         <span class="mt-1 underline block w-full text-center"
-        ><a href="/documents/2026-03-Marina Appel-Software-Engineer-CV.pdf" target="_blank"
-        >Meet my CV (PDF)</a
+        ><NuxtLink
+          to="/documents/2026-03-Marina Appel-Software-Engineer-CV2026-03-Marina-Appel-Software-Engineer-CV.pdf"
+          target="_blank"
+        >Meet my CV (PDF)</NuxtLink
         ></span
         >
         <p>Based in Hamburg. Open to short-term freelance or collaborative work.</p>
