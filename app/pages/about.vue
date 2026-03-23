@@ -11,8 +11,8 @@
           more stable and complete.
         </p>
 
-        <div class="photo max-h-[200px] max-w-[150px]">
-          <img src="/img/portrait.png" alt="my photo" />
+        <div class="photo max-h-[200px] max-w-[150px] aspect-[16/9]">
+          <img src="/img/portrait.png" height="200" width="150" alt="my photo" />
         </div>
       </div>
       <div class="item flex flex-col! gap-1">

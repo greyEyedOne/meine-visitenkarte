@@ -20,7 +20,7 @@ const buttonNames = [
 <template>
   <!-- Top panel -->
   <div
-    class="top-panel flex relative z-50 bg-transparent justify-between items-center w-full max-w-95/100 md:mb-6 mx-auto"
+    class="top-panel flex relative z-50 bg-transparent justify-between items-center w-full px-3 sm:px-4 mt-3 lg:mt-6 md:px-6 md:mb-6 mx-auto"
   >
     <NuxtLink to="/" class="logo-link">
       <div
@@ -46,7 +46,7 @@ const buttonNames = [
     </button>
 
     <!-- Desktop menu -->
-    <div class="menu hidden md:flex gap-2 w-full max-w-95/100 justify-end">
+    <div class="menu hidden md:flex gap-2 w-full justify-end">
       <div v-for="(item, i) in buttonNames" :key="i" classs="menu-item relative">
         <NuxtLink
           :to="item.link"

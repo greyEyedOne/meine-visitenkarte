@@ -7,7 +7,7 @@ import Catalogue from '~/components/portfolio/Catalogue.vue'
     <NuxtLink to="/portfolio" class="navigation mr-auto before:content-['<<'] before:mr-1">
       Back to portfolio</NuxtLink
     >
-    <section id="case-details" class="max-w-5xl mx-auto px-4 py-16">
+    <section id="case-details" class="mx-auto py-16">
       <div class="space-y-10">
         <!-- Header -->
         <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Responsive Product Grid</h2>
@@ -29,7 +29,7 @@ import Catalogue from '~/components/portfolio/Catalogue.vue'
             >
           </p>
           <div
-            class="overflow-hidden [grid-area:demo] rounded-md border border-gray-200 dark:border-gray-400 p-1 mb-auto max-w-[300px]"
+            class="overflow-hidden [grid-area:demo] rounded-md border border-gray-200 dark:border-gray-400 p-1 mb-auto max-w-[300px] aspect-[16/9]"
           >
             <img
               class="rounded-md w-full h-auto object-fill object-center"

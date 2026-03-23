@@ -67,21 +67,23 @@ const recommendations = [
       </h2>
       <div v-for="item in cases" :key="item.title" class="cases flex flex-col gap-2">
         <div class="case">
-          <h3 class="block sm:hidden text-xl mb-3 text-center">{{ item.title }}</h3>
-          <div class="case-preview-card pb-6 mb-4 flex flex-col sm:flex-row gap-4">
+          <h3 class="block sm:hidden text-xl mb-3 text-left">{{ item.title }}</h3>
+          <div
+            class="case-preview-card pb-6 mb-4 flex flex-col sm:flex-row gap-4 md:gap-6 lg:gap-8"
+          >
             <NuxtLink class="case-link cursor-pointer" :to="item.demoLink"
             ><div
-              class="image-container max-w-[400px] m-auto sm:max-w-none sm:w-[300px] md:w-[400px] lg:w-[500px] rounded-sm overflow-hidden"
+              class="image-container max-w-[400px] m-auto sm:max-w-none sm:w-[300px] md:w-[400px] lg:w-[450px] aspect-[5/4] rounded-sm overflow-hidden"
             >
               <img
                 :src="item.demoImg"
                 :alt="item.title"
-                class="portfolio-case-img mask-b-from-54% mask-b-to-100%"
+                class="portfolio-case-img mask-b-from-24% mask-b-to-90%"
               /></div
             ></NuxtLink>
-            <div class="case-description sm:self-center">
-              <h3 class="hidden sm:block text-xl mb-3 text-center">{{ item.title }}</h3>
-              <p>
+            <div class="case-description sm:self-center mb-auto">
+              <h3 class="hidden sm:block text-2xl mb-3 text-left">{{ item.title }}</h3>
+              <p class="text-left!">
                 {{ item.description
                 }}<NuxtLink
                   class="case-link underline block w-full mt-2 mb-2 cursor-pointer"
