@@ -80,7 +80,7 @@ const recommendations = [
               /></div
             ></NuxtLink>
             <div class="case-description sm:self-center">
-              <h3 class="hidden sm:block text-xl mb-3 text-center">{{ item.title }}</h3>
+              <h3 class="hidden sm:block text-2xl mb-3 text-center">{{ item.title }}</h3>
               <p>
                 {{ item.description
                 }}<NuxtLink
