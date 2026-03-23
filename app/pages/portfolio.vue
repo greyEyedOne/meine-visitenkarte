@@ -73,12 +73,12 @@ const recommendations = [
           >
             <NuxtLink class="case-link cursor-pointer" :to="item.demoLink"
             ><div
-              class="image-container max-w-[400px] m-auto sm:max-w-none sm:w-[300px] md:w-[400px] lg:w-[500px] rounded-sm overflow-hidden"
+              class="image-container max-w-[400px] m-auto sm:max-w-none sm:w-[300px] md:w-[400px] lg:w-[450px] aspect-[5/4] rounded-sm overflow-hidden"
             >
               <img
                 :src="item.demoImg"
                 :alt="item.title"
-                class="portfolio-case-img mask-b-from-54% mask-b-to-100%"
+                class="portfolio-case-img mask-b-from-24% mask-b-to-90%"
               /></div
             ></NuxtLink>
             <div class="case-description sm:self-center mb-auto">
