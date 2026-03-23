@@ -2,7 +2,7 @@
 import { useRoute } from 'vue-router'
 const route = useRoute()
 
-const includeDisclaimer = ['/portfolio-cases/responsive-product-catalogue']
+const includeDisclaimer = []
 console.log(route.path)
 </script>
 

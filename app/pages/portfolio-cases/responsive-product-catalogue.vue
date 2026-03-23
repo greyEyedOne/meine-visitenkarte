@@ -7,7 +7,7 @@ import Catalogue from '~/components/portfolio/Catalogue.vue'
     <NuxtLink to="/portfolio" class="navigation mr-auto before:content-['<<'] before:mr-1">
       Back to portfolio</NuxtLink
     >
-    <section id="case-details" class="max-w-5xl mx-auto py-16">
+    <section id="case-details" class="mx-auto py-16">
       <div class="space-y-10">
         <!-- Header -->
         <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Responsive Product Grid</h2>
