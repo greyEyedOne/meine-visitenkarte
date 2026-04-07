@@ -12,11 +12,11 @@
       ><br />
       LinkedIn:
       <a
-        href="https://www.linkedin.com/in/marinaappel/"
+        href="https://www.linkedin.com/in/marina-appel/"
         target="_blank"
         class="underline hover:text-blue-500"
       >
-        linkedin.com/in/marinaappel
+        linkedin.com/in/marina-appel
       </a>
     </p>
 
