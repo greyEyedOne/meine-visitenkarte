@@ -138,7 +138,7 @@ const recommendations = [
                                    How I work
                                  </h2><span class="mt-1 underline block w-full"
                                  ><NuxtLink to="https://github.com/greyEyedOne/ui-plus-audit-kit" target="_blank">Audit toolkit on GitHub</NuxtLink></span>
-      <span class="mt-1 underline block w-full"
-      ><NuxtLink to="/documents/templates/audit-report-template.pdf" target="_blank">See my audit report template (PDF)</NuxtLink></span></section>
+      <span class="mt-1 underline"
+      ><NuxtLink to="/documents/templates/audit-report-template.pdf" target="_blank">See my audit report template (PDF)</NuxtLink></span> <span class="text-[#f8f1f2]!">- the skeleton of every report I deliver. The content is shaped by your product and your goals.</span></section>
   </div>
 </template>
