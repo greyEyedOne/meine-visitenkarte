@@ -26,14 +26,15 @@
           in focused task blocks and prefer projects where thoughtful work matters more than speed
           for speed’s sake.
         </p>
+        <p>Based in Hamburg. Open to short-term freelance or collaborative work.</p>
         <span class="mt-1 underline block w-full text-center"
         ><NuxtLink
           to="/documents/2026-03-Marina Appel-Software-Engineer-CV2026-03-Marina-Appel-Software-Engineer-CV.pdf"
           target="_blank"
-        >Meet my CV (PDF)</NuxtLink
+        >Download CV (PDF)</NuxtLink
         ></span
         >
-        <p>Based in Hamburg. Open to short-term freelance or collaborative work.</p>
+
       </div>
     </div>
   </section>
