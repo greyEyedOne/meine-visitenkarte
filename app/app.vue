@@ -13,6 +13,17 @@ useHead({
     lang: 'en',
   },
 })
+useSeoMeta({
+  title: 'Marina Appel – Your Websmith',
+  description: 'I find where your visitors get stuck. Web audits, UI/UX improvements and new websites.',
+  ogTitle: 'I find where your visitors get stuck.',
+  ogDescription: 'Web audits, UI/UX improvements and new websites built from scratch.',
+  ogImage: 'https://ваш-домен.de/og-preview-1200x627.png',
+  ogImageWidth: 1200,
+  ogImageHeight: 627,
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+})
 </script>
 
 <template>
