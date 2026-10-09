@@ -52,6 +52,8 @@
 .photo {
   flex: 0 1 80%;
   margin: 1rem 0 1rem 1rem;
+  position: relative;
+  min-height: 200px;
 }
 
 .photo::before {
@@ -61,18 +63,29 @@
   height: 100%;
   width: 100%;
   padding: 1rem;
-  background: rgb(243, 243, 242);
   z-index: 0;
-  transform: rotate(2deg);
+  background: #0000;
+  border: 1px solid rgb(243, 243, 242);
 }
 
-.photo {
-  position: relative;
+.photo::after {
+  display: block;
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  background: #0000;
+  border: .5px solid rgb(243, 243, 242);
+  transform: rotate(-4deg) scale(1.075);
+  z-index: 0;
+  top: 0;
+  border-radius: 2px;
 }
 
 img {
   position: relative;
-  padding: 0.75rem;
+  padding: 0.1rem;
   z-index: 10;
 }
 
