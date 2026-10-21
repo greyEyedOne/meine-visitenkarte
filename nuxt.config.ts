@@ -42,10 +42,10 @@ export default defineNuxtConfig({
   },
 
   robots: {
-    rules: [
+    groups: [
       {
-        UserAgent: '*',
-        Disallow: siteEnv === 'production' ? undefined : '/',
+        userAgent: '*',
+        disallow: siteEnv === 'production' ? undefined : '/',
       },
     ],
     sitemap: 'https://www.your-websmith.de/sitemap.xml',
