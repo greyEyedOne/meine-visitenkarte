@@ -15,6 +15,7 @@
     "prepare": "husky",
     "typecheck": "nuxt typecheck"
   },
+  "packageManager": "pnpm@12.4.2",
   "dependencies": {
     "@nuxt/eslint": "1.9.0",
     "@nuxt/image": "1.11.0",
